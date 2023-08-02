@@ -2,7 +2,7 @@ package com.acorn;
 
 import java.util.Scanner;
 
-public class Study02 {
+public class Study02teacher {
 
 	public static void main(String[] args) {
 		

@@ -20,7 +20,7 @@ public class Study03 {
 				}
 				else if((selectNum != 1) && (selectNum != 2) && (selectNum != 3) && (selectNum != 4) && (selectNum != 99)) {
 					System.out.println("잘못된 메뉴를 입력하셨습니다.");
-					continue;
+					continue; // 아래 내용을 무시하고 다시 반복문(while)의 처음사항으로 이동.
 				}
 			int calNum = 0;
 			
