@@ -22,7 +22,6 @@ public class Study02teacher {
 		int iAvgDropPoint = 60;
 		int idropMarginPoint = 60;
 		// 합산/평균 점수 저장
-		int iSumPoint = 0;
 		int iAvgPoint = 0;
 		// 임의의 과목 3개에 대해 각각의 점수를 입력받는다.
 		System.out.println("A과목:>>>");
@@ -41,6 +40,7 @@ public class Study02teacher {
 		
 		// 과락에 따른 합격여부 함수 호출
 		passAtFalldownScore(iAPoint, iAPoint, iCPoint, idropMarginPoint);
+		sc.close();
 	}
 	
 	// 총점에 따른 합격여부
@@ -66,5 +66,7 @@ public class Study02teacher {
 				&& (iBpoint > passLine) 
 				&& (iCpoint > passLine)) System.out.println("합격:과락점수없음");
 		else System.out.println("불합격:과락점수존재");
+	
 	}
+	
 }
