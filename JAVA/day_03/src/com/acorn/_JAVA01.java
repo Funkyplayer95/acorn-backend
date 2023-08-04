@@ -67,7 +67,7 @@ public class _JAVA01 {
 				System.out.printf("finger=[%-5d]%n", finger);
 				System.out.printf("finger=[%05d]%n", finger);
 				System.out.printf("big=%d%n", big);
-				System.out.printf("hex=%#x%n", hex);
+				System.out.printf("hex=%#X%n", hex);
 				System.out.printf("octNum=%o, %d%n", octNum, octNum);
 				System.out.printf("hexNum=%x, %d%n", hexNum, hexNum);
 				System.out.printf("binNum=%s, %d%n", Integer.toBinaryString(binNum), binNum);
