@@ -47,8 +47,9 @@ public class Quiz04 {
 			System.out.println("잘못된 값을 입력 받았습니다.");
 			continue;
 		}
-		sc.close();
+		
 		}
+		sc.close();
 	}
 
 }
