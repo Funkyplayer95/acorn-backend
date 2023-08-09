@@ -12,7 +12,7 @@ public class Main {
 		Employee employee1 = new Employee(1, "홍길동", 1000.0);
 		System.out.println(employee1.getiEmpNo());
 		
-		double dRet = employee1.getReturnTax1(0.075);
+		double dRet = employee1.getReturnTax(0.075);
 		System.out.println("회수세금 : " + dRet);
 		
 //		Manager manager = new Manager(10, "홍길동관리자", 5000.0);
