@@ -35,7 +35,16 @@ public class BusinessPerson extends Person {
 	public void setCnum(String cnum) {
 		Cnum = cnum;
 	}
-
+	
+	public void printObject() {
+		System.out.println(this);
+	}
+	
+	public void printMsg() {
+		System.out.println("아픈 사람을 도와주자");
+	}
+	
+	
 	@Override
 	public String toString() {
 
