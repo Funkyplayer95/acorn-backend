@@ -1,7 +1,7 @@
-package com.acorn._interface;
+package day0818_01_abstract;
 
 public class OracleDatabaseMoudule 
-	implements DatabaseMoudule {
+	implements DataBaseMoudule {
 
 	@Override
 	public int insert(String s) {

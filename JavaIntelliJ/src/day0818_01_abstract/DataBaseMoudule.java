@@ -1,4 +1,4 @@
-package com.acorn._interface;
+package day0818_01_abstract;
 
 // 자바 버전에 따른 변화
 // 1.  JDK 7
@@ -15,7 +15,7 @@ package com.acorn._interface;
 //- public default 메서드
 //- public static  메서드
 // -private static 메서드
-public interface DatabaseMoudule {
+public interface DataBaseMoudule {
 	// public static final int DB_VERSION = 1;
 	// ~ JDK 7
 	int DB_VERSION = 1;
