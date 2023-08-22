@@ -6,7 +6,7 @@ public class MethodMain05 {
         System.out.println(sumArray(iSum));
     }
 
-    @org.jetbrains.annotations.Contract(pure = true)
+//    @org.jetbrains.annotations.Contract(pure = true)
     public static int sumArray(int[] Array) {
         int sum = 0;
         for (int i = 0; i < Array.length; i++) {
