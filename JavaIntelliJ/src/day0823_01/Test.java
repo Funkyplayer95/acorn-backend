@@ -4,6 +4,9 @@ import java.util.Arrays;
 
 public class Test {
     public static void main(String[] args) {
+        int[] Arr10;
+        Arr10 = new int[5];
+        System.out.println(Arrays.toString(Arr10));
         // 1번
         int a1=1; int b1=2;
         System.out.println(a1+b1);
@@ -28,7 +31,7 @@ public class Test {
         //8번
         System.out.println(q+1);
         //9번
-        System.out.println(w+1);
+        System.out.println((double)(w + 1));
         //10번
         int[] Arr1 = {10,20,30,40,50};
         //11번
