@@ -41,18 +41,27 @@ public class Test {
         for (int i = 0; i < 6; i++) {
             System.out.println(Arr2[i]);
         }
-        //13번
-        double[] dArr1 = new double[6];
-        dArr1[5] = 40.1;
-        dArr1[6] = 50.1;
-        dArr1[7] = 60.1;
-        //14번
-        for (int i = 5; i < 8; i++) {
-            System.out.println(dArr1[i]);
-        }
+//        //13번
+//        double[] dArr1 = new double[6];
+//        dArr1[5] = 40.1;
+//        dArr1[6] = 50.1;
+//        dArr1[7] = 60.1;
+        //14번 배열값을 넘어가기에 출력이 되지 않는다.
+//        for (int i = 5; i < 8; i++) {
+//            System.out.println(dArr1[i]);
+//        }
         //15번
         String[] sArr = {"korea","england","japan","china"};
-        System.out.println(Arrays.toString(sArr));
+        String[] sArr2 = new String[100];
+        sArr2[0] = "Korea";
+        sArr2[1] = "England";
+        sArr2[2] = "Japan";
+        sArr2[3] = "China";
+        for (int i = 0; i < sArr2.length; i++) {
+            if(sArr2[i] != null){
+                System.out.println(sArr[i]);
+            }
+        }
 
 
     }
