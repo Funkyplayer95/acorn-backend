@@ -1,29 +1,56 @@
 package acorn_project;
 
 public class Product {
-    private long productId;
-    private String productName;
-    private long price;
 
-    public Product(long productId, String productName, long price) {
-        this.productId = productId;
-        this.productName = productName;
-        this.price = price;
+    private  Long ProductId;
+    private  String ProductName;
+    private  Long Price;
+    private String Category;
+
+    public Product() {
     }
-
-    public long getProductId() { // 사용자 입장에서 코드를 짜기 때문에 getter 만 필요. setter 필요 없음.
-        return productId;
+    public Product(Long productId, String productName, 
+    		Long price, String Category) {
+		this.ProductId = productId;
+		this.ProductName = productName;
+		this.Price = price;
+		this.Category = Category;
+	}
+	public Product(Product product) {
+    	this.ProductId =product.getterProductId();
+    	this.ProductName =product.getterProductName();
+    	this.Price =product.getterPrice();
+    	this.Category = product.getterCategory();
     }
-
-    public String getProductName() { // 사용자의 입장에서 코드를 짜기때문에 getter만 필요하다. setter필요없음.
-        return productName;
+    public Long getterProductId() {
+    	return ProductId;
     }
-
-    public long getPrice() { // 사용자의 입장에서 코드를 짜기때문에 getter만 필요하다. setter필요없음.
-        return price;
+    public String getterProductName() {
+    	return ProductName;
     }
+    public Long getterPrice() {
+    	return Price;
+    }
+    public String getterCategory() {
+    	return Category;
+    }
+    public void getCategory(String category) {
+    	if(this.Category.equals(category)) {
+    		System.out.println(this.ProductId + ". "
+    			+"상품명 : " 
+    			+ this.ProductName 
+    			+ ", 가격 : " + this.Price + "원");
+    	}
+    }
+    
+    @Override
+    public String toString() {
+    	return String.format(this.ProductId + ". "
+    			+"상품명 : "
+    			+ this.ProductName
+    			+ ", 가격 : " + this.Price + "원"
+    			);
 
+    }
 
 }
-
-
