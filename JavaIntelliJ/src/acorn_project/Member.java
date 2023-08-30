@@ -14,12 +14,12 @@ public class Member {
 
 	public Member(long id, String name,
 			String phone, String addr) {
-		this.id = id;
-		this.name = name;
-		this.phone = phone;
-		this.addr = addr;
-		this.deliveryEveryAddr = addr;
-		this.basket = new Basket();
+		this.id = id; // main부분에서 구현
+		this.name = name; // main부분에서 구현
+		this.phone = phone; // main부분에서 구현
+		this.addr = addr; // main부분에서 구현
+		this.deliveryEveryAddr = addr; //배송지 변경을 위해
+		this.basket = new Basket(); // 장바구니 리스트,토탈금액 을 불러오기위해
 	}
 	// 배송지 변경창
 	public void updateDeliveryEveryAddr(Scanner sc){ 
@@ -29,13 +29,13 @@ public class Member {
 		String updateAddr = sc.nextLine(); 
 		setdeliveryEveryAddr(updateAddr);
 		// 변경완료문구
-		System.out.println("배송지 변경 완료!"); 
-		
+		System.out.println("배송지 변경 완료!");
+
 	}
+
 	// 주문 확인창 1.주문완료하시겠습니까? 2.배송지변경하시겠습니까? 3.뒤로가기.
-	public void orderCheck(Scanner sc){ 
-		boolean order = true;
-		while(order) {
+	public void orderCheck(Scanner sc){
+		while(true) {
 			// 주문 정보 안내 문구
 			System.out.println("====================");
 			System.out.println("주문 정보를 확인해주세요."); 
@@ -55,7 +55,7 @@ public class Member {
 				System.out.println("뒤로 갑니다.");
 				break;
 			}
-			if (num == 1) {
+			else if (num == 1) {
 				System.out.print("주문을 완료하시겠습니까? (Y/N) >>");
 				// Y/N으로 입력받기.
 				String finsh = sc.nextLine(); 
@@ -110,14 +110,9 @@ public class Member {
 	public Basket getBasket() {
 		return basket;
 	}
-	public void setAddr(String addr) {
-		this.addr = addr;
-	}
 	public void setdeliveryEveryAddr(String deliveryEveryAddr) {
 		this.deliveryEveryAddr = deliveryEveryAddr;
 	}
 
-	public void setBasket(Basket basket) {
-		this.basket = basket;
-	}
 }
+

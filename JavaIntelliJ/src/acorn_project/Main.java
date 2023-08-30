@@ -1,5 +1,7 @@
 package acorn_project;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -21,7 +23,7 @@ public class Main {
 		hashProduct.put(foodCategory3.getterProductId(), foodCategory3);
 		hashProduct.put(foodCategory4.getterProductId(), foodCategory4);
 		hashProduct.put(foodCategory5.getterProductId(), foodCategory5);
-		
+
 		categories.add(foodCategory1);
 		categories.add(foodCategory2);
 		categories.add(foodCategory3);
@@ -37,7 +39,7 @@ public class Main {
 		hashProduct.put(kitchenCategory2.getterProductId(), kitchenCategory2);
 		hashProduct.put(kitchenCategory3.getterProductId(), kitchenCategory3);
 		hashProduct.put(kitchenCategory4.getterProductId(), kitchenCategory4);
-		
+
 		categories.add(kitchenCategory1);
 		categories.add(kitchenCategory2);
 		categories.add(kitchenCategory3);
@@ -54,14 +56,14 @@ public class Main {
 		hashProduct.put(householdCategory3.getterProductId(), householdCategory3);
 		hashProduct.put(householdCategory4.getterProductId(), householdCategory4);
 		hashProduct.put(householdCategory5.getterProductId(), householdCategory5);
-		
+
 		categories.add(householdCategory1);
 		categories.add(householdCategory2);
 		categories.add(householdCategory3);
 		categories.add(householdCategory4);
 		categories.add(householdCategory5);
 
-		System.out.println(foodCategory1);
+
 		Scanner sc = new Scanner(System.in);
 
 		// 사용자 정보 입력창 (초기 한 번)
@@ -73,7 +75,7 @@ public class Main {
 
 
 		while (true) {
-			// 메인 메뉴 
+			// 메인 메뉴
 			System.out.println("==========메뉴==========");
 			System.out.println("1. 장바구니 ");
 			System.out.println("2. 상품");
@@ -86,13 +88,14 @@ public class Main {
 				break;
 			}
 
-			// 메뉴 1. 장바구니 선택 
+			// 메뉴 1. 장바구니 선택
 			else if(mainScNum == 1) {
 				int basketScNum;
 				while(true) {
 					System.out.println("========장바구니 목록=========");
 					member.getBasket().BasketRead();
 					System.out.println("===========================");
+
 					System.out.print("1. 장바구니 목록 삭제 2. 주문하기 (0: 뒤로가기): ");
 					basketScNum = Integer.parseInt(sc.nextLine());
 
@@ -109,9 +112,9 @@ public class Main {
 						break;
 					}
 				}
-			}		
+			}
 
-			// 메뉴 2. 상품 선택 
+			// 메뉴 2. 상품 선택
 			else if(mainScNum == 2) {
 				int productScNum;
 				while(true) {
@@ -122,42 +125,68 @@ public class Main {
 						break;
 					}
 					else if(productScNum == 1) {
-						System.out.println("========식품 목록========");
-						for(Product pd : categories) {
-							pd.getCategory("식품");
+						while (true) {
+							System.out.println("========식품 목록========");
+							for(Product pd : categories) {
+								pd.getCategory("식품");
+							}
+							System.out.println("========================");
+							System.out.print("장바구니에 넣을 상품ID를 입력하세요 (0: 뒤로가기): ");
+							Long productNum = Long.parseLong(sc.nextLine());
+							if (productNum == 0) {
+								break;
+							} else if (productNum > 5) {
+								System.out.println("해당 카테고리의 상품이 아닙니다");
+								System.out.println("다시 선택해주세요");
+							} else {
+								member.getBasket().BasketAdd(hashProduct.get(productNum), sc);
+							}
 						}
-						System.out.println("========================");
-						System.out.print("장바구니에 넣을 상품ID를 입력하세요 : ");
-						Long productNum = Long.parseLong(sc.nextLine());
-						member.getBasket().BasketAdd(hashProduct.get(productNum), sc);
 						continue;
 					}
 					else if(productScNum == 2) {
-						System.out.println("========주방용품 목록========");
-						for(Product pd : categories) {
-							pd.getCategory("주방용품");
+						while (true) {
+							System.out.println("========주방용품 목록========");
+							for (Product pd : categories) {
+								pd.getCategory("주방용품");
+							}
+							System.out.println("=========================");
+							System.out.print("장바구니에 넣을 상품ID를 입력하세요 (0: 뒤로가기): ");
+							Long productNum = Long.parseLong(sc.nextLine());
+							if (productNum == 0) {
+								break;
+							} else if (productNum > 9 || productNum < 6) {
+								System.out.println("해당 카테고리의 상품이 아닙니다");
+								System.out.println("다시 선택해주세요");
+							} else {
+								member.getBasket().BasketAdd(hashProduct.get(productNum), sc);
+							}
 						}
-						System.out.println("=========================");
-						System.out.print("장바구니에 넣을 상품ID를 입력하세요 : ");
-						Long productNum = Long.parseLong(sc.nextLine());
-						member.getBasket().BasketAdd(hashProduct.get(productNum), sc);
 						continue;
 					}
 					else if(productScNum == 3) {
-						System.out.println("========생활용품 목록=========");
-						for(Product pd : categories) {
-							pd.getCategory("생활용품");
+						while (true) {
+							System.out.println("========생활용품 목록=========");
+							for (Product pd : categories) {
+								pd.getCategory("생활용품");
+							}
+							System.out.println("===========================");
+							System.out.print("장바구니에 넣을 상품ID를 입력하세요 (0: 뒤로가기): ");
+							Long productNum = Long.parseLong(sc.nextLine());
+							if (productNum == 0) {
+								break;
+							} else if (productNum > 14 || productNum < 10) {
+								System.out.println("해당 카테고리의 상품이 아닙니다");
+								System.out.println("다시 선택해주세요");
+							} else {
+								member.getBasket().BasketAdd(hashProduct.get(productNum), sc);
+							}
 						}
-						System.out.println("===========================");
-						System.out.print("장바구니에 넣을 상품ID를 입력하세요 : ");
-						Long productNum = Long.parseLong(sc.nextLine());
-						member.getBasket().BasketAdd(hashProduct.get(productNum), sc);
 						continue;
+						}
 					}
-					
 				}
 			}
-		}
 		sc.close();
+		}
 	}
-}
