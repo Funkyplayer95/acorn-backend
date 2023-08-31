@@ -9,14 +9,14 @@ public class Product {
 
     public Product() {
     }
-    public Product(Long productId, String productName, 
+    public Product(Long productId, String productName, //원래는 관리자 한테만 있는 메소드다. 생성자.
     		Long price, String Category) {
 		this.ProductId = productId;
 		this.ProductName = productName;
 		this.Price = price;
 		this.Category = Category;
 	}
-	public Product(Product product) {
+	public Product(Product product) { // BasketProduct에 값을 넣어주기위해 product 안에 product를 넣었다. 중요;
     	this.ProductId =product.getterProductId();
     	this.ProductName =product.getterProductName();
     	this.Price =product.getterPrice();

@@ -7,7 +7,7 @@ public class Member {
 	private String name;
 	private String phone; 
 	private String addr;
-	private String deliveryEveryAddr;
+	private String deliveryAddr;
 	private Basket basket;
 
 	public Member() {}
@@ -18,16 +18,16 @@ public class Member {
 		this.name = name; // main부분에서 구현
 		this.phone = phone; // main부분에서 구현
 		this.addr = addr; // main부분에서 구현
-		this.deliveryEveryAddr = addr; //배송지 변경을 위해
+		this.deliveryAddr = addr; //배송지 변경을 위해
 		this.basket = new Basket(); // 장바구니 리스트,토탈금액 을 불러오기위해
 	}
 	// 배송지 변경창
-	public void updateDeliveryEveryAddr(Scanner sc){ 
+	public void updateDeliveryAddr(Scanner sc){
 		// 안내문구 출력
 		System.out.println("변경될 배송지를 입력 해주세요. >>"); 
 		// 배송지 String으로 입력받기
 		String updateAddr = sc.nextLine(); 
-		setdeliveryEveryAddr(updateAddr);
+		setdeliveryAddr(updateAddr);
 		// 변경완료문구
 		System.out.println("배송지 변경 완료!");
 
@@ -43,7 +43,7 @@ public class Member {
 			//장바구니에 담은 hashmap 불러오기
 			basket.BasketRead();
 			System.out.println("총 가격 :" + basket.BasketTotalPrice());
-			System.out.println("배송지 : " + deliveryEveryAddr);
+			System.out.println("배송지 : " + deliveryAddr);
 			System.out.println("====================");
 			System.out.println("1. 주문 완료");
 			System.out.println("2. 배송지 변경");
@@ -76,7 +76,7 @@ public class Member {
 				}
 			}
 			else if (num == 2){
-				updateDeliveryEveryAddr(sc);
+				updateDeliveryAddr(sc);
 				continue;
 			}
 			else {// 다른 문자를 받는다면
@@ -104,14 +104,14 @@ public class Member {
 	public String getAddr() {
 		return addr;
 	}
-	public String getdeliveryEveryAddr() {
-		return deliveryEveryAddr;
+	public String getdeliveryAddr() {
+		return deliveryAddr;
 	}
 	public Basket getBasket() {
 		return basket;
 	}
-	public void setdeliveryEveryAddr(String deliveryEveryAddr) {
-		this.deliveryEveryAddr = deliveryEveryAddr;
+	public void setdeliveryAddr(String deliveryAddr) {
+		this.deliveryAddr = deliveryAddr;
 	}
 
 }

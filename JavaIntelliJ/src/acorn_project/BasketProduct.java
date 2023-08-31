@@ -5,7 +5,7 @@ public class BasketProduct extends Product{
 	private int Num;
 
 	public BasketProduct(Product product, int Num) {
-		super(product);
+		super(product); // '장바구니 상품'은 이전에 '상품' 이였기 때문에 이거에 대한 값을위하여 produvt 안에 product를 넣어 불러옴
 		this.Num = Num;
 	}
 	public void setterNum(int num) {
