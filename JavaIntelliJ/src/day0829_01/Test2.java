@@ -22,11 +22,11 @@ public class Test2 {
         //'나'의 경우는 참과 거짓일 경우 실행되는 명령문이 있다는 차이가 있다.
 
         //과제4
-//        int[] Arr = new int[10];
-//        for (int i = 0; i < Arr.length; i++) {
-//            Arr[i] = (int)((Math.random())*10);
-//        }
-//        System.out.println(Arrays.toString(Arr));
+        int[] Arr = new int[10];
+        for (int i = 0; i < Arr.length; i++) {
+            Arr[i] = (int)((Math.random())*10);
+        }
+
 
         //과제 7
 //        for (int i = 2; i <10 ; i++) {
@@ -44,8 +44,9 @@ public class Test2 {
 //        }
         //과제9
 //        int[] Arr1 = new int[100];
-//        for (int i = 0; i < Arr1.length; i++) {
-//            Arr1[i] = i*10;
+//
+//        for (int i = 1; i < Arr1.length; i++) {
+//            Arr1[i] = Arr1[i-1] + 10;
 //            System.out.print(Arr1[i]+" ");
 //        }
         //과제10
