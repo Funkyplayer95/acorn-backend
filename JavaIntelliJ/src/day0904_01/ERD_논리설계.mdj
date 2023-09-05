@@ -1133,7 +1133,7 @@
 							},
 							"name": "Name",
 							"type": "VARCHAR",
-							"length": "20"
+							"length": "10"
 						},
 						{
 							"_type": "ERDColumn",
