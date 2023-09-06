@@ -11,6 +11,6 @@ public class Testday {
         boolean booking ;
         int bookingCheck = 0;
         String[] place ;
-
+//가다나다라마바사
     }
 }
