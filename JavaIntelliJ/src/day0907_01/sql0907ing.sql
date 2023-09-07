@@ -1,0 +1,21 @@
+insert into goods values(300,'생선',3333,15000,'신선');
+
+insert into goods values(301,'우유10L',2222,'65000','유제품');
+insert into goods values(302,'쫀드기 1box',1111,30000,'가공품');
+insert into goods values(303,'목장아이스크림',2222,6000,'유제품');
+insert into goods values(304,'폴라포30개',4444,45000,'냉동식품');
+insert into goods values(305,'얼린독도새우',4444,100000,'냉동식품');
+insert into goods values(306,'스팸10kg',1111,60000,'가공품');
+insert into goods values(307,'왕치즈',2222,50000,'유제품');
+insert into goods values(308,'얼린큰멸치',4444,20000,'냉동식품');
+insert into goods values(309,'동태',4444,20000,'냉동식품');
+insert into goods values(310,'갓김치',3333,30000,'신선식품');
+insert into goods values(311,'토마호크',3333,70000,'신선식품');
+insert into goods values(312,'무말랭이',3333,10000,'신선식품');
+insert into goods values(313,'뭇국밀키트',1111,11000,'가공품');
+insert into goods values(314,'옥수수',3333,15000,'신선');
+insert into goods values(315,'생선',3333,15000,'신선');
+insert into goods values(316,'생선',3333,15000,'신선');
+insert into goods values(317,'생선',3333,15000,'신선');
+insert into goods values(318,'생선',3333,15000,'신선');
+insert into goods values(319,'생선',3333,15000,'신선');
