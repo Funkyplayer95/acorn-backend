@@ -90,13 +90,23 @@ select customer.name as "°í°´¸í" , customer.adress as "ÁÖ¼Ò" ,goods.name as "»óÇ
 from customer, goodsinfo, goods
 where goods.goodsinfoid = goodsinfo.goodsinfoid and goods.goodsprice > 70000
 -- Áö¿ª °í°´¸í ÃÑ±İ¾×
-select p.placeid as "Áö¿ª", c.name as "°í°´¸í", b.totalprice as "±¸¸Å¾×"
+select p.name as "Áö¿ª", c.name as "°í°´¸í", b.totalprice as "±¸¸Å¾×"
 from customer c, place p, buydetail b
 where p.placeid = c.placeid and c.customerid = b.buydetailid
 -- ÆÇ¸ÅÁ¡º° ÆÇ¸Å¾× (ÆÇ¸ÅÁ¡ »ı¼º¾ÈÇÔ.)
 
---°í°´¸í °í°´ÁÖ¼Ò »óÇ°À¯Çü ±¸¸Å±İ¾×
-select c.name as "°í°´¸í", p.placeid as "ÁÖ¼Ò", g.name as "»óÇ°À¯Çü", q.goodsprice as "±¸¸Å±İ¾×", b.totalprice as "ÃÑ±İ¾×"
+--°í°´¸í °í°´ÁÖ¼Ò »óÇ°À¯Çü »óÇ°º°±İ¾× ÃÑ±¸¸Åºñ¿ë
+select c.name as "°í°´¸í", p.name as "ÁÖ¼Ò", g.name as "»óÇ°À¯Çü", q.goodsprice as "±¸¸Å±İ¾×", b.totalprice as "ÃÑ±İ¾×"
 from customer c, place p, goodsinfo g, buydetail b, goods q, buy t
 where p.placeid = c.placeid and c.customerid = b.buydetailid and q.goodsinfoid = g.goodsinfoid
 and q.goodsid = t.goodsid and t.customerid = b.buydetailid
+
+group by
+--´Ù¼öÀÇ ¸í·ÉÀÌ ÇÏ³ªÀÇ ÇàÀ¸·Î Ãâ·ÂÀÌµÈ´Ù.
+-- selcet c.A, Sum(b)
+--from C
+--group by C.a
+
+--group by°¡ ¾øÀ¸¸é µ¿ÀÏÇÑ ÄÃ·³ ¼ıÀÚ°¡ ¸ÂÁö¾Ê±â¿¡. (sumÀº ´Ù ´õÇØ¼­ ÇÑÁÙ¸¸³ª¿È)
+--group by ·Î ¹­¾î¼­ ¿¬ÃâÀÌ °¡´ÉÇÏ´Ù.
+--Àß»ı°¢ÇØ¼­ °øºÎÇØ¾ßÇÑ´Ù. »ı°¢ÀÌ»óÀ¸·Î ¾î·Á¿ï°ÍÀÌ´Ù. ÀÌÇØ¸¦ ÃÖ´ëÇÑ °£´ÜÇÏ°í ºü¸£°ÔÇØ¾ßÇÑ´Ù,

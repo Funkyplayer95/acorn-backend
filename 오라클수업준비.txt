@@ -1,0 +1,22 @@
+1. 오라클 시스템 사용자: System/비밀번호
+2. 테이블 스페이스(공부) 생성
+-- create tablespace 이름
+-- datafile 'C:/oraclexe/app/oracle/oradata/XE/project.db'
+-- size 100m reuse
+-- autoextend on next 1024k
+-- maxsize unlimited;
+3. 오라클 사용자(공부) 생성
+-- create user 아이디 identified by 패스워드
+-- default tablespace 이름
+-- temporary tablespace temp;
+4. 오라클 사용자 권한(공부) 부여
+-- grant connect, resource, dba to project;
+5. 테이블 생성
+5.1 SQLPLUS 생성(공부)
+5.2 SQL DEVELOPLER
+5.3 커피판매.mdj
+6. 데이터 입력
+6.1 엑셀데이터(CSV)
+6.2 데이터 초기화 프로그램(자바)
+7. 데이터베이스 응용 프로그램
+7.1 분석
