@@ -1,0 +1,46 @@
+DROP TABLE ordergoods;
+CREATE TABLE ordergoods (
+	seq					int,
+	goodscode 			char(8),
+	goodsname 			varchar2(30),
+	rawmaterialcode 	char(5),
+	rawmaterialQty		int,
+	insales				char(1)
+); 
+
+DROP TABLE insalesgoods;
+CREATE TABLE insalesgoods (
+	seq					int,
+	goodscode 			char(8),
+	goodsname 			varchar2(30),
+	rawmaterialcode 	char(5),
+	rawmaterialQty		int
+); 
+
+DROP TABLE rawmaterial;
+CREATE TABLE rawmaterial (
+	rawmaterialcode 	char(5),
+	rawmaterialname 	varchar2(30),
+	rawmaterialType 	char(5)
+);
+
+DROP TABLE orderinfo;
+CREATE TABLE orderinfo (
+	goodscode 			char(8),
+	orderQty 			int,
+	orderconfirmed 		char(1), 
+	orderdate			date
+);
+
+DROP TABLE salesinfo;
+CREATE TABLE salesinfo (
+	goodscode 			char(8),
+	orderQty 			int,
+	salesdate			date
+);
+
+DROP TABLE stockinfo;
+CREATE TABLE stockinfo (
+	rawmaterialcode 	char(5),
+	rawmaterialQty 		int
+);

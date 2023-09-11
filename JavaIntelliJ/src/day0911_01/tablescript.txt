@@ -1,0 +1,57 @@
+--주문상품--
+create table ordergoods(
+SerialNumber int,
+goodscode char(8),
+goodsname varchar2(30),
+Rawmatcode char(5),
+rawnatquantity int,
+insales char(1)
+);
+
+--판매중상품--
+create table insalesgoods(
+SerialNumber int,
+goodscode char(8),
+goodsname varchar2(30),
+Rawmatcode char(5),
+rawnatquantity int
+);
+
+--원재료--
+create table rawmat(
+rawmatcode char(5),
+rawmatname varchar2(30),
+rawmattype char(5)
+);
+
+--주문정보--
+create table orderinfo(
+goodscode char(8),
+orderquantity int,
+ordercheck char(1),
+orderdate date
+);
+
+--판매정보--
+create table salesinfo(
+goodscode char(8),
+salesquantity int,
+salesdate date
+);
+
+--재고정보--
+create table stockinfo(
+rawmatcode char(5),
+rawmatquantity int
+);
+
+--메뉴--
+create table menu(
+ordergoods varchar2(20)
+changerawmatquantity int
+);
+
+1. 문자
+정해진 데이터 : char(13)
+정해지지 않은 데이터 : varchar2(20)
+숫자 : int
