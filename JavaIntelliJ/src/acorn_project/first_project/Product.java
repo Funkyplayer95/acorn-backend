@@ -1,4 +1,4 @@
-package acorn_project;
+package acorn_project.first_project;
 
 public class Product {
 

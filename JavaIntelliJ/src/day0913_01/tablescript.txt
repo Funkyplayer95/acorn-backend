@@ -1,0 +1,68 @@
+DROP TABLE ordergoods;
+CREATE TABLE ordergoods (
+	seq					int,
+	goodscode 			varchar2(20),
+	goodsname 			varchar2(30),
+	rawmaterialcode 	varchar2(20),
+	rawmaterialQty		int,
+	insales				char(1)
+); 
+-- 기본키: seq
+-- 기본값: insales -> 'n'
+
+DROP TABLE insalesgoods;
+CREATE TABLE insalesgoods (
+	seq					int,
+	goodscode 			varchar2(20),
+	goodsname 			varchar2(30),
+	rawmaterialcode 	varchar2(20),
+	rawmaterialQty		int
+); 
+
+-- 기본키: seq
+-- 기본값
+
+DROP TABLE rawmaterial;
+CREATE TABLE rawmaterial (
+	id					int,
+	rawmaterialcode 	varchar2(20),
+	rawmaterialname 	varchar2(30),
+	rawmaterialType 	varchar2(20)
+);
+
+-- 기본키: rawmaterialcode
+-- 기본값
+
+DROP TABLE orderinfo;
+CREATE TABLE orderinfo (
+	goodscode 			varchar2(20),
+	orderQty 			int,
+	orderconfirmed 		char(1), 
+	orderdate			date
+);
+-- 기본키: goodscode
+-- 기본값: orderdate -> SYSDATE
+
+DROP TABLE salesinfo;
+CREATE TABLE salesinfo (
+	goodscode 			varchar2(20),
+	orderQty 			int,
+	salesdate			date
+);
+
+-- 기본키: orderdate
+-- 기본값: salesdate -> SYSDATE
+
+DROP TABLE stockinfo;
+CREATE TABLE stockinfo (
+	rawmaterialcode 	varchar2(20),
+	rawmaterialQty 		int
+);
+-- 기본키: rawmaterialcode
+-- 기본값
+
+create table userinfo (
+    userid  varchar2(20),
+    userpassword varchar2(20),
+    role    char(1)  --u : 일반사용자, a:관리자
+);

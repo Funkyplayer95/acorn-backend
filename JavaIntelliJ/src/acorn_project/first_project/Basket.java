@@ -1,6 +1,4 @@
-package acorn_project;
-
-import com.sun.jdi.Value;
+package acorn_project.first_project;
 
 import java.util.HashMap;
 import java.util.Scanner;

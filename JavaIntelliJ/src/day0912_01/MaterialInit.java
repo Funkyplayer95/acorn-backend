@@ -5,14 +5,13 @@ import java.util.ArrayList;
 public class MaterialInit {
 
 	public MaterialInit() {}
-	
-	public static ArrayList<ArrayList<Material>> getInitMaterialList() {
-		ArrayList<Material> rawMatList = new ArrayList<>();
-		//타입 1 원두
-		ArrayList<Material> rawmatCoffeList =
 
+    public static ArrayList<ArrayList<Material>> getInitMaterialList() {
+        return null;
+    }
 
-		return rawMatList;
-	}
+//    public static ArrayList<ArrayList<Material>> getInitMaterialList() {
+//    }
 }
+
 

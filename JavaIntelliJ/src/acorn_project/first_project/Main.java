@@ -1,6 +1,4 @@
-package acorn_project;
-
-import org.w3c.dom.ls.LSOutput;
+package acorn_project.first_project;
 
 import java.util.ArrayList;
 import java.util.HashMap;
