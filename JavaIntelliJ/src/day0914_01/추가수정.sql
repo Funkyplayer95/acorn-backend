@@ -1,0 +1,113 @@
+update stockinfo
+set rawmaterialqty = 5
+where stockid between 1 and 20;
+
+drop table stockinfo;
+create table stockinfo(
+stockid int,
+rawmaterialcode 	varchar2(20),
+rawmaterialQty 		int
+);
+
+
+
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('11111',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('22222',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('33333',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('44444',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('55555',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('66666',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('77777',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('88888',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('99999',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('111110',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('122221',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('133332',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('144443',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('155554',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('166665',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('177776',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('188887',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('199998',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('211109',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('222220',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('233331',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('244442',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('255553',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('266664',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('277775',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('288886',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('299997',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('311108',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('322219',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('333330',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('344441',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('355552',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('366663',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('377774',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('388885',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('399996',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('411107',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('422218',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('433329',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('444440',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('455551',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('466662',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('477773',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('488884',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('499995',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('511106',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('522217',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('533328',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('544439',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('555550',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('566661',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('577772',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('588883',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('599994',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('611105',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('622216',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('633327',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('644438',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('655549',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('666660',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('677771',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('688882',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('699993',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('711104',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('722215',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('733326',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('744437',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('755548',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('766659',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('777770',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('788881',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('799992',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('811103',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('822214',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('833325',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('844436',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('855547',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('866658',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('877769',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('888880',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('899991',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('911102',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('922213',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('933324',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('944435',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('955546',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('966657',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('977768',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('988879',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('999990',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1011101',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1022212',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1033323',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1044434',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1055545',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1066656',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1077767',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1088878',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1099989',30);
+INSERT INTO stockinfo(rawmaterialcode,rawmaterialQty) VALUES('1111100',30);

@@ -1,9 +1,9 @@
 package acorn_project.second_project;
+
 import java.sql.*;
 import java.util.Scanner;
 
 public class StockInfoAdmin {
-    Scanner sc = new Scanner(System.in);
     private String rawmaterialCode;
     private int rawmaterialQty;
     private static String DB_URL
@@ -30,29 +30,23 @@ public class StockInfoAdmin {
         Scanner sc = new Scanner(System.in);
         Connection conn = null;
         PreparedStatement pstmt = null;
-        ResultSet rs = null;
         try {
-            //Á¢¼Ó
+            //ì ‘ì†
             conn = DriverManager.getConnection(DB_URL, USER, PASS);
-            //º¯°æ¹®±¸ ÀÛ¼º
-//            String sqlSelect = "Select * from stockinfo";
+            //ë³€ê²½ë¬¸êµ¬ ì‘ì„±
             String sqlUpdate = "update stockinfo set rawmaterialqty = ? where stockid between ? and ? ";
-//            String sqlUpdate2 = "update stockinfo set rawmaterialqty = 10 where stockid between 1 and 5 ";
-            System.out.println("Àç°í¼ö·®À» ÀÔ·ÂÇØÁÖ¼¼¿ä");
+            System.out.println("ì¬ê³ ìˆ˜ëŸ‰ì„ ì…ë ¥í•´ì£¼ì„¸ìš”");
             String rawmaterialqty = sc.nextLine();
-            System.out.println("Ã³À½¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä ");
+            System.out.println("ì²˜ìŒë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” ");
             String stockid1 = sc.nextLine();
-            System.out.println("³¡¹øÈ£¸¦ ÀÔ·ÂÇØÁÖ¼¼¿ä ");
+            System.out.println("ëë²ˆí˜¸ë¥¼ ì…ë ¥í•´ì£¼ì„¸ìš” ");
             String stockid2 = sc.nextLine();
             pstmt = conn.prepareStatement(sqlUpdate);
             pstmt.setInt(1, Integer.valueOf(rawmaterialqty));
             pstmt.setInt(2, Integer.valueOf(stockid1));
             pstmt.setInt(3, Integer.valueOf(stockid2));
-            System.out.println(100);
             int iRet = pstmt.executeUpdate();
-            System.out.println(200);
             System.out.println(iRet);
-            System.out.println(300);
 
             sc.close();
         }
@@ -80,5 +74,3 @@ public class StockInfoAdmin {
     }
 }
 
-
-}

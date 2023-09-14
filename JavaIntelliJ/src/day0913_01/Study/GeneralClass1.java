@@ -1,6 +1,6 @@
-package programmingbasic4;
+package day0913_01.Study;
 
-public class GeneralClass {
+public class GeneralClass1 {
 
 	// 일반 변수 영역 - 필드 영역
 	private int iFirst;
@@ -8,9 +8,9 @@ public class GeneralClass {
 	
 	// 생성자 영역
 	// 기본생성자 == 디폴트 생성자
-	public GeneralClass() {}
+	public GeneralClass1() {}
 	// 인자가 있는 생성자
-	public GeneralClass(int iFirst, int iSecond) {
+	public GeneralClass1(int iFirst, int iSecond) {
 		this.iFirst = iFirst;
 		this.iSecond = iSecond;
 	}
