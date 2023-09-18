@@ -1,4 +1,4 @@
-package acorn_project.second_project;
+package com.acorn.jdbc_project;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -20,7 +20,6 @@ public class UserActivity {
 	private Connection conn;
 	private Statement stmt;
 	private ResultSet rs;
-	
 	
 	public UserActivity(Scanner sc) {
 		this.sc = sc;

@@ -1,4 +1,4 @@
-package acorn_project.second_project;
+package com.acorn.jdbc_project;
 
 import java.util.Scanner;
 

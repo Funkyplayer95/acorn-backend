@@ -1,4 +1,4 @@
-package acorn_project.second_project;
+package com.acorn.jdbc_project;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,9 +8,10 @@ import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Login {
-	private static String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
-	private static String USER = "project";
-	private static String PASS = "ljuneh";
+	
+	static Mention men = new Mention();
+	
+	private static Connection conn = null;
 	
 	private static String QUERY1 = "select userid, userpassword, role\r\n"
 			+ "from userinfo\r\n"
@@ -21,7 +22,10 @@ public class Login {
 	public Login() {}
 	
 	public static void enter(Scanner sc) {
-		Connection conn = null;
+		
+		// DB 연
+		conn = Configure.getConnObject();
+		
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		
@@ -35,9 +39,7 @@ public class Login {
 		System.out.print("비밀번호 입력 >>> ");
 		String enteredPassword = sc.nextLine();
 		
-		
 		ResultSet retRs = searchId(conn, pstmt, rs, enteredId);
-		
 		
 		if((retRs==null) && (--loginCount>0)) {
 			System.out.println("처음 로그인으로 돌아옵니다. 로그인 카운트가 "+loginCount+"만큼 남았습니다");
@@ -70,10 +72,14 @@ public class Login {
 		
 		
 		if(isIdPassed&&isPasswordPassed&&(role=='a')) {
-			System.out.println("로그인 성공");
-			System.out.println("관리자 권한으로 로그인합니다");
+			Mention.MakeBox1(men,  men.getLoginAdmin());
+			
+			MakeAdmin admin = new MakeAdmin(conn, sc);
+			
 		} else if(isIdPassed&&isPasswordPassed&&(role=='u')) {
 			System.out.println("로그인 성공");
+			System.out.println("");
+			System.out.println("사용자 권한으로 로그인합니다");
 			System.out.println("사용자 권한으로 로그인합니다");
 			
 			UserActivity userActivity = new UserActivity(sc);
@@ -84,11 +90,9 @@ public class Login {
 	
 	private static ResultSet searchId(Connection conn, PreparedStatement pstmt, ResultSet rs, String enteredId) {
 		try {
-			conn = DriverManager.getConnection(DB_URL, USER, PASS);
 			pstmt = conn.prepareStatement(QUERY1);
 			pstmt.setString(1, enteredId);
 			rs = pstmt.executeQuery();
-			
 			
 			if(rs.next()) {
 //				
