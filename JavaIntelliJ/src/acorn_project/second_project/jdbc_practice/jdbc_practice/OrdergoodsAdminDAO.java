@@ -1,4 +1,4 @@
-package com.acorn.jdbc_project;
+package acorn_project.second_project.jdbc_practice.jdbc_practice;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -6,7 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-public class OrdergoodsDAO {
+public class OrdergoodsAdminDAO {
 
 	SqlMention sql = new SqlMention();
 	

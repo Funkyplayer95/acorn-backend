@@ -1,6 +1,6 @@
-package com.acorn.jdbc_project;
+package acorn_project.second_project.jdbc_practice.jdbc_practice;
 
-// ENTITY
+//ENTITY
 public class OrderGoodsET {
 	private int SEQ;
 	private String GOODSCODE;
@@ -71,7 +71,7 @@ public class OrderGoodsET {
 	
 	@Override
 	public String toString() {
-		return String.format("\t상품코드: %-9s │ 상품이름: %-6s │ 판매여부: %s", GOODSCODE, GOODSNAME, INSALES);
+		return String.format("상품코드: %-9s │ 상품이름: %-6s │ 판매여부: %s", GOODSCODE, GOODSNAME, INSALES);
 	}
 	
 }

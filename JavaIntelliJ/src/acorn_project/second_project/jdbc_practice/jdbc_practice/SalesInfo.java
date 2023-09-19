@@ -1,4 +1,4 @@
-package com.acorn.jdbc_project;
+package acorn_project.second_project.jdbc_practice.jdbc_practice;
 
 import java.sql.Date;
 import java.util.ArrayList;
@@ -26,7 +26,7 @@ public class SalesInfo {
 	   System.err.printf(men.getMiddleLine2(), "", men.getSelectEndDate());
 	   Date eDate = Date.valueOf(sc.next());
 	       
-	   SalesInfoDAO2 sDAO = new SalesInfoDAO2();
+	   SalesInfoAdminDAO sDAO = new SalesInfoAdminDAO();
 	   
 	   sET = sDAO.getList(admin, sDate, eDate);
 	   

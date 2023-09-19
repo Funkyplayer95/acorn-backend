@@ -1,4 +1,4 @@
-package com.acorn.jdbc_project;
+package acorn_project.second_project.jdbc_practice.jdbc_practice;
 
 import java.sql.Date;
 
@@ -44,4 +44,5 @@ public class SalesInfoEntity {
 	public String toString() {
 		return String.format("\t상품이름: %s │ 상품수량: %-4s │ 결제일: %s", goodsCode, orderQuantity, salesDate);
 	}
+
 }

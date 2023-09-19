@@ -1,4 +1,4 @@
-package acorn_project.second_project;
+package acorn_project.second_project.jdbc_practice.jdbc_practice;
 
 import java.sql.Connection;
 import java.sql.SQLException;

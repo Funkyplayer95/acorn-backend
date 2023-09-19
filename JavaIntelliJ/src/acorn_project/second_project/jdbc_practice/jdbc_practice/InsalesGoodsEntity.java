@@ -1,7 +1,6 @@
-package com.acorn.jdbc_project;
+package acorn_project.second_project.jdbc_practice.jdbc_practice;
 
 public class InsalesGoodsEntity {
-	
 	private int seq;
 	private String goodsCode;
 	private String goodsName;
@@ -59,6 +58,10 @@ public class InsalesGoodsEntity {
 		this.rawMaterialQuantity = rawMaterialQuantity;
 	}
 	
+	@Override
+	public String toString() {
+		return String.format("seq: %d, 상품코드: %s, 상품명: %s, 원자재코드: %s, 원자재수량: %d", 
+				seq, goodsCode, goodsName, rawMaterialCode, rawMaterialQuantity);
+	}
 	
-
 }
