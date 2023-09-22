@@ -1,4 +1,4 @@
-package com.acorn.calculator;
+package day0920_02;
 
 import java.awt.Color;
 import java.awt.GridLayout;
@@ -157,10 +157,7 @@ public class Calculator {
 		
 		btnNum05.addActionListener(new ActionListener() {		
 			@Override
-			public void actionPerformed(ActionEvent e) {
-				tfResult.setText(tfResult.getText() + "5");
-
-			}
+			public void actionPerformed(ActionEvent e) {tfResult.setText(tfResult.getText() + "5"); }
 		});
 		
 		btnNum06.addActionListener(new ActionListener() {		
