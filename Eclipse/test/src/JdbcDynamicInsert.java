@@ -20,7 +20,7 @@ public class JdbcDynamicInsert {
 			// 연결 설정
 			conn = DriverManager.getConnection(DB_URL, USER, PASS);
 			// 구문객체 생성
-			String sqlInsert = "INSERT INTO stockInfo(rawmaterialcode, rawmaterialqty) "
+			String sqlInsert = "INSERT INTO stockInfo(rawmaterialname, rawmaterialqty) "
 					+ "Values(?, ?)";
 			String rawmatcode = "342345";
 			int qty = 200;
@@ -29,8 +29,8 @@ public class JdbcDynamicInsert {
 			pstmt.setInt(2, qty);
 			int iRet = pstmt.executeUpdate();
 
-			String sqlSelect = "SELECT rawmaterialcode, rawmaterialqty "
-					+ "FROM stockInfo WHERE rawmaterialcode = ?";
+			String sqlSelect = "SELECT rawmaterialname, rawmaterialqty "
+					+ "FROM stockInfo WHERE rawmaterialname = ?";
 			if(iRet >= 1) {
 				pstmt = conn.prepareStatement(sqlSelect);
 				pstmt.setString(1, rawmatcode);

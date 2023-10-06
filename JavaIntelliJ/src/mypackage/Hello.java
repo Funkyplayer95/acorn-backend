@@ -53,8 +53,8 @@ public final class Hello extends HttpServlet {
                       HttpServletResponse response)
       throws IOException, ServletException {
 
-        response.setContentType("text/html");
-        response.setCharacterEncoding("UTF-8");
+        response.setContentType("text/html; charset=uft-8");
+
         try (PrintWriter writer = response.getWriter()) {
 
             writer.println("<!DOCTYPE html><html>");
