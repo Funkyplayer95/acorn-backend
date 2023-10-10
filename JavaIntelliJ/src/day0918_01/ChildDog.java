@@ -1,7 +1,7 @@
 package com.acorn.polyphorphism;
 
 public class ChildDog 
-	extends ParentAnimal {
+	extends com.acorn.polyphorphism.ParentAnimal {
 	String iEatThing;
 	
 	public ChildDog() {	

@@ -4,10 +4,10 @@ public class RunMain {
 
 	public static void main(String[] args) {
 		// 다형성
-		ParentAnimal parentAnimal = 
-				new ChildDog("Gum", 12, 8);
+		com.acorn.polyphorphism.ParentAnimal parentAnimal =
+				new com.acorn.polyphorphism.ChildDog("Gum", 12, 8);
 		parentAnimal.run();
-		((ChildDog)parentAnimal).eat();;	
+		((com.acorn.polyphorphism.ChildDog)parentAnimal).eat();;
 		
 		// Cast: 한 타입을 다른 타입으로 변경
 		// 명시적 타입변환

@@ -22,7 +22,7 @@ body {
 /*** Table Styles **/
 .table-fill {
 	background: white;
-	border-radius: 3px;
+	border-radius:``````````````````` 3px;
 	border-collapse: collapse;
 	height: 300px;
 	margin: auto;
