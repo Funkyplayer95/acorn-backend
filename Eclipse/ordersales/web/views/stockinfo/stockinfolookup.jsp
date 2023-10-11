@@ -145,20 +145,22 @@ td.text-left {
 		<table class="table-fill">
 			<thead>
 				<tr>
-					<th class="text-left">재고 코드</th>
+					<th class="text-left">재고 이름</th>
 					<th class="text-left">재고 수량</th>
+					<th class="text-left">재고 코드</th>
+				</tr>
 			</thead>
 			<c:forEach var="stockInfo" items="${stockinfo}">
 				<tbody class="table-hover">
 					<tr>
 						<td class="text-left">${stockInfo.rawmaterialname}</td>
 						<td class="text-left">${stockInfo.rawmaterialqty}</td>
+						<td class="text-left">${stockInfo.rawmaterialcode}</td>
 					</tr>
 			</c:forEach>
 			</tbody>
 		</table>
-
-
+<%// 하나만 50으로 재고변동 할 수 있는 버튼을 만들어야한다. 각 셀마다 넣어주던가, 버튼에서 코드를 입력받아 진행하던가. %>
 		<input type='button' value='재고 가득 채우기' id="btn" />
 	</div>
 	<script>

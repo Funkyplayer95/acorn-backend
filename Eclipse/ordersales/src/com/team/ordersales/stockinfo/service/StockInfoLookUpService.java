@@ -12,7 +12,6 @@ public class StockInfoLookUpService {
 
 	public void stockInfoLookUp(HttpServletRequest req) {
 		List<StockInfoEntity> rslist = null;
-//		System.out.println(1);
 		try {
 			rslist = StockInfoLookUpDao.getStockInfoList();
 

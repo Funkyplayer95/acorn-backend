@@ -1,7 +1,3 @@
-update stockinfo
-set rawmaterialqty = 5
-where stockid between 1 and 20;
-
 drop table stockinfo;
 create table stockinfo(
 stockid int,

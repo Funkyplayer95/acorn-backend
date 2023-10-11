@@ -1,0 +1,2 @@
+module day_10 {
+}

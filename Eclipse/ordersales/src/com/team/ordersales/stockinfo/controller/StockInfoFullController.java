@@ -19,9 +19,9 @@ public class StockInfoFullController extends HttpServlet {
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		req.setCharacterEncoding("UTF-8");
-
+		System.out.println(11);
 		new StockInfoFullService().stockInfoFull(req);
-
+		System.out.println(12);
 		new ServletForward().pageForward(req, resp);
 	}
 
