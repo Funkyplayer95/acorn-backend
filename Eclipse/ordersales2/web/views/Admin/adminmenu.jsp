@@ -40,9 +40,9 @@
 	</div>
 	
 	<div id="adminMenuBar">
-		<div class="menu" onclick="location.href='http://localhost:8090/ordersales/views/Admin/stock/stockinfolookup.jsp">재고 관리</div>
-		<div class="menu" onclick="location.href='http://localhost:8090/ordersales/views/Admin/insale/insalesLIst.jsp'">상품 관리</div>
-		<div class="menu" onclick="location.href='http://localhost:8090/ordersales/views/Admin/sales/salesinfo.jsp'">매출 관리</div>
+		<div class="menu" onclick="location.href='/ordersales/stockinfo'">재고 관리</div>
+		<div class="menu" onclick="location.href='/ordersales/insaleList'">상품 관리</div>
+		<div class="menu" onclick="location.href='/ordersales/views/Admin/sales/salesinfo.jsp'">매출 관리</div>
 	</div>
 </body>
 </html>

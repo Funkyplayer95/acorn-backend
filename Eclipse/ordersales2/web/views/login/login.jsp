@@ -53,7 +53,7 @@
 
 <body>
     <div>
-        <form action="http://localhost:8090/ordersales/logincheck" method="GET">
+        <form action="/ordersales/logincheck" method="GET">
             <input type="text" placeholder="아이디" name="id" class="in">
             <input type="password" placeholder="비밀번호" name="passwd" class="in">
             <input type="submit" id="btn" value="로그인"><br>

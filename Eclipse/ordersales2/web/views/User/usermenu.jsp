@@ -19,6 +19,14 @@
 	    
 	}
 	
+	#wrap{
+		text-align: center;
+	}
+	
+	#userMenuBar{
+		width: fit-content;
+	}
+	
 	.menu{
 		display : flex;
 		width: 100px;
@@ -26,19 +34,26 @@
 		margin: 10px;
 		background-color: #007bff;
 		color: #fff;
-		justify-content : center;
+		justify-content : 
+		center;
 		align-items: center;
 	}	
-
+	
+	a{
+		text-decoration: none;
+	}
 </style>
 </head>
 <body>
-	<h1> JinDoBay</h1>
+	<h1> JinDoBay </h1>
 	
-	<div id="userMenuBar">
-		<div class="menu" onclick="location.href='http://localhost:8090/ordersales/views/User/electronic/electronic.jsp'">가전 제품</div>
-		<div class="menu" onclick="location.href='http://localhost:8090/ordersales/views/User/fashion/fashion.jsp'">패션</div>
-		<div class="menu" onclick="location.href='http://localhost:8090/ordersales/views/User/sports/sports.jsp'">스포츠</div>
+	<div id="wrap">
+		<div id="userMenuBar">
+			<div class="menu" onclick="location.href='/ordersales/productinfo?&category=electronic'">가전 제품</div>
+			<div class="menu" onclick="location.href='/ordersales/productinfo?&category=fashion'">패션</div>
+			<div class="menu" onclick="location.href='/ordersales/productinfo?&category=sports'">스포츠</div>
+		</div>
 	</div>
+	
 </body>
 </html>

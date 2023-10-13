@@ -22,7 +22,7 @@
 <body>
     <div>
 		<h1>${id}님 ${message}</h1>
-		<a href="http://localhost:8090/ordersales/main.jsp">메인으로</a>
+		<a href="/ordersales/main.jsp">메인으로</a>
     </div>
 </body>
 

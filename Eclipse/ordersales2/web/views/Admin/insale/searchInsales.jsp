@@ -1,18 +1,21 @@
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
 <%@page import="com.team.ordersales.order.dto.IdentifyInsalesDto"%>
-<%@page import="com.team.ordersales.sales.dao.SearchInsalesDao"%>
-<%@page import="java.util.ArrayList" %>
-<%@ page import="java.io.PrintWriter"%>
-<%
-request.setCharacterEncoding("UTF-8");
-%>
+<%@page import="com.team.ordersales.sales.dao.InsalesDao"%>
+<%@ page import="java.util.List" %>
+<%@page import="java.io.PrintWriter"%>
+<%@page import="javax.servlet.http.HttpServletResponse"%>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions" %>  
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>Insales검색결과</title>
+    <meta charset="UTF-8">
+    <title>판매중 상품 보기</title>
     <style>
+    	a{
+    		color: black;
+    	}
+    
         body {
             font-family: Arial, sans-serif;
             background-color: #f0f0f0;
@@ -22,9 +25,12 @@ request.setCharacterEncoding("UTF-8");
 
         h1 {
             text-align: center;
-            text-decoration: underline;
-            
+            color: black;
         }
+        
+        a {
+	        text-decoration: none;
+		}
 
         table {
             width: 80%;
@@ -38,7 +44,33 @@ request.setCharacterEncoding("UTF-8");
             text-align: center;
             border: 1px solid #ddd;
         }
-
+        
+	    .jd-td {
+	        border-right: none;
+	        margin-left:35px;
+	        width:40px;
+	    }
+	
+	    .rd-td {
+	        border-left: none;
+	        text-align: center;
+	        vertical-align: middle;
+	        width:20px;
+	    }
+	    
+	    .fd-td{
+	    	width:120px;
+	    }
+	
+	    #edit-btn {
+	        color: white;
+	        font-size: 15px;
+	        background-color: #191970;
+	        border: none;
+	        border-radius: 3px;
+	        cursor: pointer;
+	    }
+    
         th {
             background-color: #007bff;
             color: #fff;
@@ -94,45 +126,17 @@ request.setCharacterEncoding("UTF-8");
 		    padding: 5px;
 		    border: none;
 		}
-	
-        /* 토글 스위치 스타일 */
-	    .toggleSwitch {
-	        width: 2rem;
-	        height: 1rem;
-	        position: relative;
-	        background-color: #fff;
-	        box-shadow: 0 0 1rem 3px rgba(0, 0, 0, 0.15);
-	        cursor: pointer;
-	        border-radius: 2rem;
-	        margin: auto; /* 가운데 정렬 */
-	    }
-	
-	    .toggleSwitch .toggleButton {
-	        width: 1rem;
-	        height: 1rem;
-	        position: absolute;
-	        top: 50%;
-	        left: 0.2em;
-	        transform: translateY(-50%);
-	        border-radius: 50%;
-	        background: #EFFBFB; /* "off" 상태의 색상: 빨간색 */
-	        transition: left 0.2s ease-in-out, background-color 0.2s ease-in-out;
-	    }
-	
-	    /* 체크박스가 체크되면 변경 이벤트 */
-	    .toggleSwitch input:checked ~ .toggleButton {
-	        left: calc(100% - 1.2rem);
-	        background: #4CAF50; /* "on" 상태의 색상: 초록색 */
-	    }
+		
     </style>
+    
 </head>
 <body>
     <div>
-        <h1>판매중 상품목록</h1>
+        <h1><a href="/ordersales/insaleList">판매중 상품목록</a></h1>
     </div>
         
     <div id="search-box">        
-		<form method="post" name="search" action="searchInsales.jsp">
+		<form method="GET" name="search" action="/ordersales/search">
 			<table class="pull-right">
 				<tr>
 					<td><select class="form-control" name="searchField">
@@ -144,50 +148,57 @@ request.setCharacterEncoding("UTF-8");
 						placeholder="검색어 입력" name="searchText" maxlength="100"></td>
 					<td><button type="submit" class="btn btn-success">검색</button></td>
 				</tr>
-
 			</table>
 		</form>    
 	</div>
     
     <div>
-    	<form action="###" method="post">	
-        <table border="1">
+    	<table border="1">
             <tr>
                 <th>상품코드</th>
                 <th>상품이름</th>
                 <th>원자재 코드</th>
                 <th>원자재 수량</th>
-                <th>판매여부</th>
+                <th class="ib-th-5" colspan="2">판매여부</th>
             </tr>
-			<%
-				SearchInsalesDao searchInsalesDao = new SearchInsalesDao();
-				ArrayList<IdentifyInsalesDto> list = searchInsalesDao.getSearch(request.getParameter("searchField"), 
-						request.getParameter("searchText"));
-				if (list.size() == 0) {
-					PrintWriter script = response.getWriter();
-					script.println("<script>");
-					script.println("alert('검색결과가 없습니다.')");
-					script.println("history.back()");
-					script.println("</script>");
-				}
-				
-				for (int i = 0; i < list.size(); i++)
-				{
-			%>
-			
-			 <tr>
-		         <td><%=list.get(i).getGOODSCODE() %></td>
-		         <td><%=list.get(i).getGOODSNAME() %></td>
-		         <td><%=list.get(i).getRAWMATERIALCODE() %></td>
-		         <td><%=list.get(i).getRAWMATERIALQTY() %></td>
-		      	 <td><%=list.get(i).getINSALES() %> <input type="button" value="수정"></td>
+            
+        <c:if test="${empty searchInsalelist}">		
+		    <script>
+		        alert('검색결과가 없습니다.');
+		        history.go(-1);
+    		</script>
+        </c:if>
+        
+		<c:forEach var="searchInsalelist" items="${searchInsalelist}">
+			<tr>
+				<td class="fd-td">${searchInsalelist.GOODSCODE}</td>
+				<td>${searchInsalelist.GOODSNAME}</td>
+				<td>${searchInsalelist.RAWMATERIALCODE}</td>
+				<td>${searchInsalelist.RAWMATERIALQTY}</td>
+				<td class="jd-td">${searchInsalelist.INSALES}</td>
+				<td class="rd-td">
+					<form action="/ordersales/alertInsale" method="GET" onsubmit="return call_confirm()">
+						<input type="submit" id="edit-btn" name="alertInsales" value="변경">
+						<input type="hidden" name="goodsCode" value="${searchInsalelist.GOODSCODE}">
+						<input type="hidden" name="insales" value="${searchInsalelist.INSALES}">
+					</form>
+					<!-- <a href="/ordersales/alertInsale?goodsCode="${insalelist.GOODSCODE}"&insales="${insalelist.INSALES}"></a>
+						이 방법으로도 가능. -->
+				</td>
 			</tr>
-			
-			<%
-				}
-			%>
-		</table>
-        </form>
-    </div>
+		</c:forEach>
+       </table>
+    </div>    
 </body>
+<script>
+	function call_confirm(){
+		if(confirm("판매여부 바꾸시겠습니?")){
+			alert("변경완료");
+			return true;
+		}else{
+			alert("취소되었습니다");
+			return false;
+		}
+	}
+</script>
 </html>

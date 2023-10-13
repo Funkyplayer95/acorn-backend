@@ -13,7 +13,7 @@
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
 
-body {
+	body {
 		font-family: Arial, sans-serif;
 		background-color: #f0f0f0;
 		margin: 0;
@@ -54,7 +54,7 @@ body {
 	<div>
 	<h1>판매내역</h1>
 		<br>
-		<form action="http://localhost:8090/ordersales/salesinfo">
+		<form action="/ordersales/salesinfo">
 			<label for="start_date">시작 날짜:</label>
 			<input type="date"id="start_date" name="start_date" value="${vstartdate}">
 			&nbsp;&nbsp;&nbsp;&nbsp;

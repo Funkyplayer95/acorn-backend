@@ -162,7 +162,7 @@
 
       
       <Resource Type="javax.sql.Datasource" auth="Container" driverClassName="oracle.jdbc.OracleDriver" maxActive="20" maxIdle="10" maxWait="-1" name="jdbc/myoracle" password="kht123" url="jdbc:oracle:thin:@localhost:1521:xe" username="kht123"/>
-    <Context docBase="ordersales" path="/ordersales" reloadable="true" source="org.eclipse.jst.jee.server:ordersales"/></Host>
+    <Context docBase="ordersales3" path="/ordersale" reloadable="true" source="org.eclipse.jst.jee.server:ordersales3"/><Context docBase="ordersales2" path="/ordersales" reloadable="true" source="org.eclipse.jst.jee.server:ordersales2"/></Host>
     </Engine>
   </Service>
 </Server>

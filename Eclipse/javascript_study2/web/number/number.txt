@@ -1,0 +1,25 @@
+﻿1. Number 객체
+- 브라우저에 의해 자동변환: var num = 1;
+- 문법: var val = new Number(number);
+- 숫자 외 값을 사용하면  NaN(Not a number) 리턴
+
+2. Number 프로퍼티
+- MAX_VALUE: var val = Number.MAX_VALUE;
+- MIN_VALUE
+- NaN: 유효한 숫자를 리턴해야 하는 함수의 에러 조건을 체크하는데 사용
+- 중략
+- prototype: 현재 문서내 새로운 프로퍼티나 메소드  할당
+- constructor: 오브젝트 생성 함수 리턴
+
+3. Prototype
+- 현재 문서내 임의의 객체에 새로운 프로퍼티나 메소드  할당
+- 임의의 객체: Number, Boolean, String, Date 등등
+- 문법: 객체명.prototype.name = value
+
+4. constructor
+
+5. Number 메소드
+- toString(): number.toString( [radix] )
+radix(진수): 2~36
+- valueOf(): 오브젝트의 프리미티브 값, number.valueOf() 
+

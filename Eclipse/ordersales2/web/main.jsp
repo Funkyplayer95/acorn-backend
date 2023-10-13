@@ -63,7 +63,7 @@
     </style>
 </head>
 <body>
-	<h1> JH's Cafe </h1>
-	<a href="http://localhost:8090/ordersales/views/login/login.jsp">로그인</a>
+	<h1> JinDoBay </h1>
+	<a href="/ordersales/views/login/login.jsp">로그인</a>
 </body>
 </html>
