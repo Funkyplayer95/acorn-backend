@@ -18,13 +18,13 @@ public class StockInfoFullController extends HttpServlet {
 
 	@Override
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		
+		// 0.문자셋 설정
 		req.setCharacterEncoding("UTF-8");
-		
+		// 1.사용자 입력처리
 		String sCode = req.getParameter("rawmaterialcode");
-		
+		// 2.데이터베이스 - 서비스코드
 		new StockInfoFullService().stockInfoFull(req, sCode);
-		
+		// 3.JSP 페이지 호출
 		new ServletForward().pageForward(req, resp);
 	}
 

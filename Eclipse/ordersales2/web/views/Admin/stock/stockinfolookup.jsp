@@ -6,186 +6,195 @@
 <!DOCTYPE html>
 <html>
 <style>
-	@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
-	
-	h1 {
-        text-align: center;
-        text-decoration: underline;
-        
-    }
-    
-	body {
-		background-color: #f0f0f0;
-		font-family: Arial, sans-serif;
-		font-size: 16px;
-		font-weight: 300px;
-		text-rendering: optimizeLegibility;
-		margin: 0;
-		padding: 0;
-	}
+@import
+	url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap')
+	;
 
-	table {
-            width: 80%;
-            margin: 10px auto;
-            border-collapse: collapse;
-            background-color: #fff;
-            border : 2px solid black;
-        }
+h1 {
+	text-align: center;
+	text-decoration: underline;
+}
 
-        th, td {
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
+body {
+	background-color: #f0f0f0;
+	font-family: Arial, sans-serif;
+	font-size: 16px;
+	font-weight: 300px;
+	text-rendering: optimizeLegibility;
+	margin: 0;
+	padding: 0;
+}
 
-        th {
-            background-color: #007bff;
-            color: #fff;
-        }
+table {
+	width: 80%;
+	margin: 10px auto;
+	border-collapse: collapse;
+	background-color: #fff;
+	border: 2px solid black;
+}
 
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
-            /* background-color: #dbd7d7; */
-        }
+th, td {
+	padding: 10px;
+	text-align: center;
+	border: 1px solid #ddd;
+}
 
+th {
+	background-color: #007bff;
+	color: #fff;
+}
 
-	#search-box {
-	    display: flex;
-	    align-items: center;
-	    height: 50px;
-	    margin: 5px; /* 전체적인 부피 줄임 */
-	    margin-left: 150px;
-	    width: 400px;
-	}
-			
-	#search-box select,
-	#search-box input[type="text"] {
-	    padding: 6px; /* 작은 패딩 적용 */
-	    border: none;
-	    border-radius: 5px;
-	    margin-right: 10px;
-	    font-size: 14px;
-	    flex-grow: 1;
-	    background-color: white; /* 배경색 없앰 */
-	    
-	}
-			
-	#search-box button {
-	    padding: 6px 16px; /* 작은 패딩 적용 */
-	    height: 30px;
-	    width: 200px; /* 가로 너비를 늘림 */
-	    background-color: #007bff;
-	    color: #fff;
-	    border: none;
-	    border-radius: 5px;
-	    cursor: pointer;
-	    transition: background-color 0.3s;
-	    box-shadow: 0px 4px 0 rgb(0,0,0,0.5);
-	}
-			
-	#search-box button:hover {
-	    background-color: #014894; /* 호버 시 배경색 변경 */
-	}
-	#search-box button:active {
-		box-shadow: 0px 1px 0 rgb(0,0,0,0);
- 		position: relative;
- 		top:3px;
-	}
-	#btn {
-		width: 150px;
-		height: 100px;
-		font-size: 18px;
-		font-weight : bold;
-		border-radius: 10px;
-		background-color: #a905f0;
-		color: white;
-		margin: auto;
-		border: none;
-		cursor: pointer;
-		transition: background-color 0.3s;
-	    box-shadow: 0px 4px 0 rgb(0,0,0,0.5);
-	}
-	#btn:hover {
-		background-color: #4e1c63;
-	}
-	#btn:active{
-		box-shadow: 0px 1px 0 rgb(0,0,0,0);
- 		position: relative;
- 		top:3px;
-	}
-	#full-btn{
-		color: white;
-	    font-size: 15px;
-	    background-color: #191970;
-	    border: none;
-	    border-radius: 3px;
-	    cursor: pointer;
-	    width: 70px; 
-	    height: 30px;
-	}
-	#btn-form{
-	display : flex;
+tr:nth-child(even) {
+	background-color: #f2f2f2;
+	/* background-color: #dbd7d7; */
+}
+
+#search-box {
+	display: flex;
+	align-items: center;
+	height: 50px;
+	margin: 5px; /* 전체적인 부피 줄임 */
+	margin-left: 150px;
+	width: 400px;
+}
+
+#search-box select, #search-box input[type="text"] {
+	padding: 6px; /* 작은 패딩 적용 */
+	border: none;
+	border-radius: 5px;
+	margin-right: 10px;
+	font-size: 14px;
+	flex-grow: 1;
+	background-color: white; /* 배경색 없앰 */
+}
+
+#search-box button {
+	padding: 6px 16px; /* 작은 패딩 적용 */
+	height: 30px;
+	width: 200px; /* 가로 너비를 늘림 */
+	background-color: #007bff;
+	color: #fff;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	box-shadow: 0px 4px 0 rgb(0, 0, 0, 0.5);
+}
+
+#search-box button:hover {
+	background-color: #014894; /* 호버 시 배경색 변경 */
+}
+
+#search-box button:active {
+	box-shadow: 0px 1px 0 rgb(0, 0, 0, 0);
+	position: relative;
+	top: 3px;
+}
+
+#btn {
+	width: 150px;
+	height: 100px;
+	font-size: 18px;
+	font-weight: bold;
+	border-radius: 10px;
+	background-color: #a905f0;
+	color: white;
+	margin: auto;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s;
+	box-shadow: 0px 4px 0 rgb(0, 0, 0, 0.5);
+}
+
+#btn:hover {
+	background-color: #4e1c63;
+}
+
+#btn:active {
+	box-shadow: 0px 1px 0 rgb(0, 0, 0, 0);
+	position: relative;
+	top: 3px;
+}
+
+#full-btn {
+	color: white;
+	font-size: 15px;
+	background-color: #191970;
+	border: none;
+	border-radius: 3px;
+	cursor: pointer;
+	width: 70px;
+	height: 30px;
+}
+
+#btn-form {
+	display: flex;
 	justify-content: center;
 	align-content: center;
-	margin-top : 50px;
-	
-	}
+	margin-top: 50px;
+}
 </style>
 <head>
 <meta charset="UTF-8">
 <title>재고 조회</title>
 </head>
 <body>
-<h1><a href="/ordersales/views/Admin/adminmenu.jsp">재고 조회 </a></h1>
+	<h1>
+		<a href="/ordersales/views/Admin/adminmenu.jsp">재고 조회 </a>
+	</h1>
 	<div>
-	<form action = '/ordersales/stockinfosearch' method = 'get' id='search-box'>
-		<label for = 'category'></label>
-			<select name = 'searchplace' id='category'>
-				<option value=''>카테고리 선택 </option>
+		<form action='/ordersales/stockinfosearch' method='get'
+			id='search-box'>
+			<label for='category'></label> <select name='searchplace'
+				id='category'>
+				<option value=''>카테고리 선택</option>
 				<option value='electronic'>전자제품</option>
 				<option value='sports'>스포츠</option>
 				<option value='fashion'>의류</option>
 				<option value='toy'>장난감</option>
-			</select>
-			<input type = 'text' maxlength="100" placeholder="검색어 입력" name='searchtext' />
-			<button type = 'submit'>검색</button>
+			</select> <input type='text' maxlength="100" placeholder="검색어 입력"
+				name='searchtext' />
+			<button type='submit'>검색</button>
 		</form>
 		<table>
-				<tr>
-					<th class="text-left">재고 이름</th>
-					<th class="text-left">재고 수량</th>
-					<th class="text-left">재고 코드</th>
-					<th class="text-left">채우기</th>
-				</tr>
+			<tr>
+				<th class="text-left">재고 이름</th>
+				<th class="text-left">재고 수량</th>
+				<th class="text-left">재고 코드</th>
+				<th class="text-left">채우기</th>
+			</tr>
 			<c:forEach var="stockInfo" items="${stockinfo}">
-					<tr>
-						<td class="text-left">${stockInfo.rawmaterialname}</td>
-						<td class="text-left">${stockInfo.rawmaterialqty}</td>
-						<td class="text-left">${stockInfo.rawmaterialcode}</td>
-						<td>
-							<form action="/ordersales/stockinfo4" method="get" onsubmit="return isfill()">
-								<input type='submit' value='채우기' id='full-btn'/>
-								<input type='hidden' value="${stockInfo.rawmaterialcode}" name="rawmaterialcode" />
-							</form>
-						</td>
-					</tr>
+				<tr>
+					<td class="text-left">${stockInfo.rawmaterialname}</td>
+					<td class="text-left">${stockInfo.rawmaterialqty}</td>
+					<td class="text-left">${stockInfo.rawmaterialcode}</td>
+					<td>
+						<form action="/ordersales/stockinfo4" method="get"
+							onsubmit="return isfill()">
+							<input type='submit' value='채우기' id='full-btn' /> <input
+								type='hidden' value="${stockInfo.rawmaterialcode}"
+								name="rawmaterialcode" />
+						</form>
+					</td>
+				</tr>
 			</c:forEach>
 			</tbody>
 		</table>
 
-		<form action="/ordersales/stockinfo4" method="get" onsubmit="return isfill()" id='btn-form'>
-			<input type='submit' value='전체 채우기' id="btn" />
-			<input type='hidden' value="all" name="rawmaterialcode" />
+		<form action="/ordersales/stockinfo4" method="get"
+			onsubmit="return isfill()" id='btn-form'>
+			<input type='submit' value='전체 채우기' id="btn" /> <input type='hidden'
+				value="all" name="rawmaterialcode" />
 		</form>
-		
+
 	</div>
 </body>
 <script>
-	function isfill(){
-		if(confirm("재고 수량을 가득 채우시겠습니까?")){
+	function isfill() {
+		if (confirm("재고 수량을 가득 채우시겠습니까?")) {
 			alert("재고 수량을 가득 채웠습니다");
 			return true;
-		}else{
+		} else {
 			alert("명령을 취소했습니다.");
 			return false;
 		}

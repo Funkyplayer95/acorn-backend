@@ -24,7 +24,7 @@ public class StockInfoSearchDao {
 		String search = "select r.rawmaterialname, o.rawmaterialqty, o.rawmaterialcode\r\n" + 
 				"from rawmaterial r \r\n" + 
 				"inner join stockinfo o on r.rawmaterialcode = o.rawmaterialcode and o.category= ?\r\n" + 
-				"where o.rawmaterialcode\r\n" + 
+				"where r.rawmaterialname\r\n" + 
 				"LIKE '%'||?||'%'";
 
 		Connection conn = ConfigureImpl.getConnObject();

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+	<bean name="university" class="springcore.university.University"
+		p:id="8426" p:name="공자">
+		<property name="location">
+			<bean name="location" class="springcore.university.Location"
+				p:x="333" p:y="444" >
+				<property name="address">
+					<bean name="address" class="springcore.university.Address"
+					p:street="호그와트" p:city="9와4분의3 승강장" />
+				</property>
+			</bean>
+		</property>
+	</bean>
+</beans>
