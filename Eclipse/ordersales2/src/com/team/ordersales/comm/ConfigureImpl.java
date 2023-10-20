@@ -8,9 +8,6 @@ public class ConfigureImpl{
    
    private static Connection conn = null;
    public final static String DB_URL = "jdbc:oracle:thin:@192.168.0.123:1521:xe";
-//   public final static String DB_URL = "jdbc:oracle:thin:@192.168.35.29:1521:xe";
-//   public final static String DB_URL = "jdbc:oracle:thin:@172.30.1.36:1521:xe";
-//   public final static String DB_URL = "jdbc:oracle:thin:@localhost:1521:xe";
    public final static String DB_USER = "team1";
    public final static String DB_PASS = "team1";
    

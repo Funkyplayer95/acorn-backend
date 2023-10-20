@@ -170,10 +170,11 @@ tr:nth-child(even) {
 					<td class="text-left">${stockInfo.rawmaterialcode}</td>
 					<td>
 						<form action="/ordersales/stockinfo4" method="get"
-							onsubmit="return isfill()">
-							<input type='submit' value='채우기' id='full-btn' /> <input
-								type='hidden' value="${stockInfo.rawmaterialcode}"
-								name="rawmaterialcode" />
+							onsubmit="return is_fill(${vlaue});">
+							<input type='number' min='1' value='0' id='full-btn'
+								name='little_full' /> <input type='submit' value='채우기'
+								id='full-btn' /> <input type='hidden'
+								value="${stockInfo.rawmaterialcode}" name="rawmaterialcode" />
 						</form>
 					</td>
 				</tr>
@@ -182,7 +183,7 @@ tr:nth-child(even) {
 		</table>
 
 		<form action="/ordersales/stockinfo4" method="get"
-			onsubmit="return isfill()" id='btn-form'>
+			onsubmit="return full_fill()" id='btn-form'>
 			<input type='submit' value='전체 채우기' id="btn" /> <input type='hidden'
 				value="all" name="rawmaterialcode" />
 		</form>
@@ -190,9 +191,18 @@ tr:nth-child(even) {
 	</div>
 </body>
 <script>
-	function isfill() {
-		if (confirm("재고 수량을 가득 채우시겠습니까?")) {
-			alert("재고 수량을 가득 채웠습니다");
+	function is_fill(i) {
+		if (confirm("선택하신 수량만큼 채우시겠습니까?")) {
+			alert("재고 수량을 채웠습니다");
+			return true;
+		} else {
+			alert("명령을 취소했습니다.");
+			return false;
+		}
+	}
+	function full_fill() {
+		if (confirm("재고 수량을 채우시겠습니까?")) {
+			alert("재고 수량을 채웠습니다");
 			return true;
 		} else {
 			alert("명령을 취소했습니다.");
