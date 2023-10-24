@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Sql Mapper -->
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="member">
+
+	<select id="findMemberId" parameterType="int" resultType="member">
+		<![CDATA[
+		SELECT	id, password, name, address
+		FROM	member_new
+		WHERE	id=#{id}
+		]]>
+	</select>
+	
+	<insert id="insertMember" parameterType="member" >
+	<![CDATA[
+		insert into member_new
+		values(#{id}, #{password}, #{name}, #{address});
+			]]>
+	</insert>
+	
+	<update id="UpdateConditions" parameterType="member" >
+	<![CDATA[
+		update member_new set address=#{address}
+		where id=#{id};
+			]]>
+	</update>
+
+
+
+
+
+</mapper>
