@@ -14,22 +14,32 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		]]>
 	</select>
 	
-	<insert id="insertMember" parameterType="member" >
-	<![CDATA[
-		insert into member_new
-		values(#{id}, #{password}, #{name}, #{address});
-			]]>
-	</insert>
+	<select id="findmMember" resultType="member">
+		SELECT id, password, name, address 
+		FROM member_new
+	</select>
 	
-	<update id="UpdateConditions" parameterType="member" >
-	<![CDATA[
-		update member_new set address=#{address}
-		where id=#{id};
-			]]>
+	<select id="findMemberById2" parameterType="string" resultType="member">
+		SELECT id, password, name, address 
+		FROM member_new 
+		WHERE address=#{address}
+	</select>
+	
+	<select id="findMemberByIdAndPwd" parameterType="selectionconditions" resultType="member">
+		SELECT id, password, name, address 
+		FROM member_new WHERE id=#{id} 
+		AND password=#{password}
+	</select>
+
+	<insert id="insertMember" parameterType="member">
+		<![CDATA[
+		INSERT INTO member_new 
+		VALUES(#{id}, #{password}, #{name}, #{address})
+		]]>
+	</insert>
+
+	<update id="updateMemberById" parameterType="updateconditions">
+		UPDATE member_new SET address=#{address} WHERE id=#{id}
 	</update>
-
-
-
-
 
 </mapper>

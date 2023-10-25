@@ -50,10 +50,10 @@ public class Member {
 	
 	@Override
 	public String toString() {
-		return "id : " + getId() + ", " 
-				+ "passwd : " + getPassword() 
-				+ ", " + "name : " + getName() 
-				+ ", " + "address : " + getAddress();
+		return "id:" + getId() + "," 
+				+ "passwd:" + getPassword() 
+				+ "," + "name:" + getName() 
+				+ "," + "address:" + getAddress();
 	}
 
 }
