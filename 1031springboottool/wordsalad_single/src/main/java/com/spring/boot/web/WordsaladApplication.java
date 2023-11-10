@@ -1,13 +1,13 @@
-package com.acron.project;
+package com.spring.boot.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class ProjectApplication {
+public class WordsaladApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(ProjectApplication.class, args);
+		SpringApplication.run(WordsaladApplication.class, args);
 	}
 
 }
