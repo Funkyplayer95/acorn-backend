@@ -1,9 +1,0 @@
-String sLine = studentid#name#departmentid;
-
-String[] sArr = sLine.split("#");
-
-Title#studentid#name#departmentid
-Data#1234567#고길동#20001#
-Data#1234567#고길동#20001#
-Data#1234567#고길동#20001#
-Data#1234567#고길동#20001#

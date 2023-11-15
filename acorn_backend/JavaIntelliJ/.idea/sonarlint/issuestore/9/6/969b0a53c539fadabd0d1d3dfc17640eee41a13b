@@ -1,18 +1,0 @@
-
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(‘›çÿ
-N
-java:S1854"8Remove this useless assignment to local variable "room".(“ý‰ƒ
-B
-java:S1481",Remove this unused "checkIn" local variable.(Úç¨ê
-H
-java:S1481"-Remove this unused "checkOut" local variable.(ÚôÁØýÿÿÿÿ
-?
-java:S1481")Remove this unused "room" local variable.(“ý‰ƒ
-J
-java:S1481	"/Remove this unused "roomChange" local variable.(ž«òäýÿÿÿÿ
-G
-java:S1481",Remove this unused "booking" local variable.(Ç·žŽþÿÿÿÿ
-G
-java:S1481"1Remove this unused "bookingCheck" local variable.(Þòû¸
-@
-java:S1481"*Remove this unused "place" local variable.(šÊÂ™

@@ -16,10 +16,9 @@ body {
 	margin: 0 auto;
 	width: 600px;
 	/* height: 600px; */
-	border: 1px solid black;
+	border: 2px solid black;
 	padding: 0;
-	border-top-left-radius: 5%; 
-	border-top-right-radius: 5%;
+	border-radius: 5%;
 	
 }
 
@@ -29,6 +28,7 @@ body {
 	height: 300px;
 	margin: 0 auto;
 	text-align: left;
+	font-size : 16px;
 }
 
 #underdiv {
@@ -40,29 +40,41 @@ body {
 
 #underdiv>div {
 	width: 50%;
-	border: 1px solid black;
 	height: 100%;
 }
 
 #underdiv>div>a {
-	font-size: 100px;
-	color: red;
+	font-size: 70px;
+	color: #D94925;
+	text-decoration-line: none;
 }
+#underdiv>div>a> a:hover {
+	color: #80CBC4;
+	cursor: pointer;
+}
+
+#div1 {
+	border-right : solid black 2px;
+}
+#div2 {
+	border-left : solid black 2px;
+}
+
 hr {
 	border: 10px;
 	margin: 0;
+}
+h4 {
+	margin: 5px;
 }
 </style>
 <body>
 <br><br><br>
 	<div id="bigdiv">
 		<h1>&#60; ${userinfo.nickname} &#62; 님의 My Page</h1>
-		<c:if test="${not empty requestScope.successMessage}">
-	    <p style="color: green;"><%= request.getAttribute("successMessage") %></p>
-	</c:if>
-		<br> <br>
 		<div id="updiv">
 			<h3>아이디 : ${userinfo.id}</h3>
+			<br>
 				<form action="/Mypage/changenickname" method="post">
 				<h3>
 					닉네임 : ${userinfo.nickname}   &nbsp;
@@ -70,6 +82,7 @@ hr {
     						<input type="submit" value="닉네임 변경">
 				</h3>
 			</form>
+			<br>
 			<form action="/Mypage/changepw" method="post">
 				<h3>
 					비밀번호 변경 : 
@@ -77,22 +90,23 @@ hr {
     						<input type="submit" value="비밀번호 변경">
 				</h3>
 			</form>
+			<br>
 			<form action="/Mypage/changetel" method="post">
 				<h3>
 					핸드폰 번호 : ${userinfo.tel} 
     						<input type="hidden" name="id" value="${userinfo.id}">
-    						<input type="submit" value="전화번호 변경">
-    						
+    						<input type="submit" value="전화번호 변경">			
 				</h3>
 			</form>
+			<br>
 		</div>
 		<hr size=10 color=#D94925>
 		<div id="underdiv">
-			<div>
-				&#60; 내가 쓴 게시글 &#62; <br> <a> ${userinfo.postcount} </a>
+			<div id="div1">
+				<h4>&#60; 내가 쓴 게시글 &#62;</h4> <br> <a href=#> ${userinfo.postcount} </a>
 			</div>
-			<div>
-				&#60; 내가 쓴 댓글 &#62; <br> <a> ${userinfo.commentcount} </a>
+			<div id="div2">
+				<h4>&#60; 내가 쓴 댓글 &#62;</h4> <br> <a href=#> ${userinfo.commentcount} </a>
 			</div>
 		</div>
 
