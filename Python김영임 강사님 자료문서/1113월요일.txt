@@ -1,0 +1,159 @@
+python언어(빅데이터,AI적용하기위해서 학습,시각화)
+https://www.python.org/
+
+ 영임쌤강사ip
+\\192.168.0.95
+
+윈도우시작
+ Anaconda3(64bit)
+ ㄴAnaconda Navigator선택
+
+Home
+  All applications  on:ck선택되어 있으면 성공
+Environments
+  ㄴCreate+클릭(왼쪽하단)
+    Name: ck
+      python: 3.11.5
+Learning
+
+
+ vsCode설치
+  환경설정
+   ㄴ첫번째 확장 python IntelliSense(pylanc)~~~
+  ㄴ두번째 File메뉴 autosave, miniMap취소,마우스휠
+
+Mtest
+ㄴwork1113
+  test.py삭제 
+  01test.py문서 프린트print()연습 ==>File메뉴 Save As...
+  02cal.py문서  변수내용 연산
+ 
+//리액트,js,java,spring,파이썬 
+kor = 90
+eng = 85 
+01순서] 합계 계산   hap추천,tot추천, sum()내장함수, sum변수로비권장
+02순서] 평균 계산   합계/2   합계//2
+03순서] 70점부터 합격  0~69재시험  if제어문 avg>=70 합격   else  재시험
+04순서] 100~90 학점A, 89~80 B, 79~70 C, 69~60 D,  0~59 F
+05순서] 국어,영어점수를 키보드입력 data=input('안내문')
+06순서] 형변환  문자/문자열 데이터 형변환   int( ), float()
+07순서] print('{}')   print('%d')  print(' ', '', )    
+08순서] 내장함수 print(), input(),int(),float()
+
+파이썬 대소문자 정확히 구별
+주의사항1) 들여쓰기 
+주의사항2)  ~~~~~~~~~~~~ :
+                   들여쓰기
+
+
+	hap = kor + eng 
+	avg = hap/2
+	print('총점 =', hap )  추천
+	print("총점 =" + hap )   에러발생 
+	print("총점 =" , hap )    에러아님
+	print("총점 =" +"표시" )   문자열연결
+
+
+age = 15
+if age < 19 :
+    print('할인되었습니다.')
+else :
+    print('할인이 안 됩니다.')
+
+//다중 if~elif~else
+age = 15
+if age >= 70 :
+    print('시니어 대상  모든할인')
+if age >= 55 :
+    print('중장년대상 ')
+if age >= 30 :
+    print('청년 할인 30%')
+if age >= 15 :
+    print('학생및 청소년 모든할인')
+else :
+    print('부모승인및 자체결재안됨')
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+파이썬언어특징
+ㄴ대소문구별있음 
+ㄴage = 23 
+ㄴ모니터출력 print(age)  자동라인개행 
+ㄴ 틀림 char grade='B'  
+    틀림 String title="blue" 
+ㄴ파이썬주석 #
+
+
+파이썬언어실습위한 프로그램설치
+ㄴ 제어판 (vscode삭제, 파이썬삭제, 아나콘다삭제)
+ㄴ vscode 다운후 설치후 간단한 파이썬문서 test.py작성만 
+ㄴ 아나콘다 다운후 설치(파이썬자동포함, 가상환경)
+
+https://code.visualstudio.com
+ vsCode설치
+  환경설정
+   ㄴ첫번째 확장 python IntelliSense(pylanc)~~~
+  ㄴ두번째 File메뉴 autosave, miniMap취소,마우스휠
+
+https://www.anaconda.com/download
+ ㄴ설치시간 소요
+  ㄴ윈도우시작  Anaconda
+
+수업내용, 기존배운내용, 기타등등 궁금...
+ ㄴjava언어 오픈소스
+ ㄴC# (자바언어 흡사)
+
+
+Mtest
+ㄴwork1113폴더생성후  vscode에서 File메뉴 openFolder선택
+   test.py문서 작성
+ 
+
+
+파이썬코드를 작성하는 편집기
+ ㄴvscode, 파이참, 이클립스, 쥬피터노트북 
+
+
+
+강사컴퓨터 
+ DESKTOP-23UGBPD
+ C:\Mtest\공통문서다운로드 
+
+ 영임쌤강사ip
+\\192.168.0.95
+
+
+
+ㄴ파이썬언어 대소문구별있음 
+ㄴ데이터타입기술생략   int age = 23 ; 문장마지막세미콜론생략가능
+   age = 23 
+ㄴ모니터출력 print('나이= ', age)
+ㄴ파이썬문자열 문자'B'   문자열"blue" 
+ㄴ파이썬주석 #
+
+ 
+
+강사: 김영임 
+수업진행 50분수업, 10분 휴식
+
+
+
+1교시 45분수업 15분휴식
+5교시 45분수업 15분휴식 
+7교시 ~ 8교시 예습복습  취업관련문서 자소,포플   미리서 완성
+
+
+
+컴퓨터 언어
+ㄴC,html웹,SQL,XML환경설정  
+ㄴjava,jsp,spring,sql 
+ㄴ초급-화면출력,변수,연산,제어,반복문(for,while)
+ㄴ중급-배열,객체배열,함수-리턴값,매개인자
+ㄴ화면뷰+db+처리언어(java,python,c#)
+ㄴpython언어(빅데이터,AI적용하기위해서 학습,시각화)
+  
+취업관련문서 자소,포플   미리서 완성 

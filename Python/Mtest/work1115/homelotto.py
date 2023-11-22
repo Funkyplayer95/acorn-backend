@@ -14,6 +14,23 @@ for Game_num in range(1,Game_num+1):
         x = random.randint(1, 45)  # 6번의 x = 난수발생
         if x not in lotto:  # 중복값 조회하는 방법. (리스트안에 x값이 안겹친다면)
             lotto.append(x) # append 이용, list에 값 대입.
+
     lotto.sort()
     print(lotto)
+    #5번을 다른번호 뽑으려면 어찌해야하려나
+print()
+
+lotto2 = set()
+result = True
+
+while True :
+    num = random.randint(1,45)
+    if len(lotto2) >= 6:
+        break
+    else : 
+        lotto2.add(num)
+
+lotto3 = [*lotto2]
+lotto3.sort()
+print(lotto3)
 
