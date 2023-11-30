@@ -15,8 +15,18 @@ print()
 print('- ' * 50)
 
 #정규식, 문자열 겹치는  내용변경 
-data = 'blue apple cherry apple myCom myApple aPPle orange Apple'
-# 해결 1] apple단어 snow변경  정규식, replace(), 문자열[시작:끝-1]
-
+data = 'blue apple cherry apple myCom  myApple aPPle orange Apple'
+# 해결1] apple단어 snow변경 정규식,replace() , 문자열[시:끝-1]
 print(data)
-print(re.sub('apple','snow',data))
+print(re.sub('apple', 'snow',data))
+
+
+
+
+
+
+
+
+
+print()
+print()

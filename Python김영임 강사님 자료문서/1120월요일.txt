@@ -12,9 +12,54 @@ Mtest
 ㄴwork1120
   ㄴdata폴더
   ㄴ01test.py
+  ㄴ02star.py
+  ㄴLG.py 
+    파일피클저장dump/load
+    엑셀csv파일생성,저장,csv열기
+    전역변수, 일반함수, 리턴값함수, 매개인자함수 
+    함수참조 import / from import
+    람다식 lambda
+
+
+21일 화요일
+ ㄴ람다식 다시 복습, 리스트축약형 
+ ㄴ정규식 시작 import re
+
+
+이원하 깃주소 https://github.com/snscrawler
+
+     람다식 설명 한번 설명후  실습 
      파일처리 임포트부분없이 f=open(1파일명, 2모드w/r, 3인코딩) 
      pickle,csv파일처리 
      람다식은 함수축약해서 사용 lambda
+     리스트축약식
+        42페이지 class
+
+
+
+class Mytest:
+   전역변수
+   생성 def __init__(기본인자self):
+           처리
+   
+   함수 def wind(self):
+           처리
+ 
+  함수 def add(self, x,y):
+           hap = x + y
+           return hap 
+  
+
+ ob = new Mytest()
+ ob.wind()
+ data = ob.add(2,3)
+
+
+  select * from emp  where sal>950 or sal>1250 or sal>5000 ;
+  select * from emp  where sal > any(950,1250,5000) ;
+
+
+
      정규식  import re 
 
      //저장write
