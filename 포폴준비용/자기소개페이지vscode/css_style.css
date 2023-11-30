@@ -1,0 +1,150 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html{
+    height: 100%;
+}
+header{
+    height: 55px;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+}
+/* ------여기서 부터 메인 ------*/
+aside{
+    width: 50%;
+    height: 1100px;
+    float: left;
+    display: flex;
+    background-color: paleturquoise;
+}
+
+.gbox{
+    height: 1100px;
+    width: 50%;           
+    background: rgb(222, 154, 222);
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bigbox{
+    width: 80%;
+    height: 800px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+.bigbox .box1{
+    height: 400px;
+    width: 50%;
+    box-sizing: border-box;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+
+}
+.box1-1{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 100%;
+    border-top-left-radius: 50px;
+    background-color: black;
+
+}
+.hidden-box1{
+    display: none;
+}
+.box1-1:hover .hidden-box1{
+    display: block;
+}
+.box1-1:hover .h21{
+    display: none;
+}
+.hidden-box1{
+    color: white;
+}
+.box1-2{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 100%;
+    border-top-right-radius: 50px;
+    background-color: white;
+}
+.hidden-box2{
+    display: none;
+}
+.box1-2:hover .hidden-box2{
+    display: block;
+}
+.box1-2:hover .h22{
+    display: none;
+}
+.box1-2 .hidden-box2{
+    height: 100%;
+    width: 200px;
+    color: black;
+    text-align: center;
+    
+}
+.box2{
+    height: 400px;
+    width: 50%;
+    box-sizing: border-box;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
+.box2-1{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+
+    border-bottom-left-radius: 50px;
+    background-color: white;
+}
+.box2-2{
+    display: flex;    
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-bottom-right-radius: 50px;
+    background-color: black;
+}
+.h21{
+color: white;
+text-shadow: 1px 0 15px;
+}
+.h22{
+color: black;
+text-shadow: 1px 0 20px;
+}
+
+h2 a{
+    text-decoration: none;
+    color: white;
+}
+h2 a:hover{
+    font-size: 60px;
+    
+}
+footer{
+    height: 55px;
+    background-color: white;
+}
