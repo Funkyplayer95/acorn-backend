@@ -1,0 +1,15 @@
+show databases ; <- 데이터베이스 보여주기
+create database 0000 ; <- 데이터베이스 만들기
+use 0000; <- 데이터베이스 사용
+show tables; <- 테이블 보여주기
+
+create table test (
+num int(4) not null auto_increment primary key,
+name varchar(10) not null
+);
+
+desc test ;
+insert into test(name) values('kim');
+insert into test(name) values('lee');
+commit ;
+select num, name from test ;

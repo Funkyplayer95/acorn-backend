@@ -23,13 +23,13 @@ bc  토요일 하늘 lsdjlfjp 월요일 eirp cherry 토요일 weoripti
 # 파일처리(txt,csv,피클,json) 
 # pip install WordCloud
 
-file = open('./data/navercm.txt', 'r', encoding='utf-8')
+file = open('./work1130/data/navercm.txt', 'r', encoding='utf-8')
 rfile=file.read()
 print(rfile)
 
 spwords = set(STOPWORDS)
 
-wc = WordCloud(max_font_size=350,stopwords=spwords, font_path='C:/windows/Fonts/malgun.ttf', background_color='blank', width=1000, height=1000)   
+wc = WordCloud(max_font_size=350,stopwords=spwords, font_path='C:/windows/Fonts/malgun.ttf', background_color='white', width=1000, height=1000)   
 #~~/malgun.ttf', background_color='black', width=1000, height=1000)   
 wc.generate(rfile)
 plt.figure(figsize=(8,8))
