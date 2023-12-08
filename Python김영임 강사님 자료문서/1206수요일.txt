@@ -7,6 +7,106 @@
  ㄴAnaconda Navigator선택
   All applications  on:ck선택
 
+
+ 12월 06일 수요일 ~ 12월 15일 금요일  머신러닝
+ 12월 18일 월요일 ~  12월 28일 목요일  딥러닝
+
+
+Mtest
+ㄴwork1206
+   data폴더 
+     titanic폴더
+    01test.py
+    02sk_iris.py
+  보스톤집값, 삼성전자주식 
+ 
+from sklearn.linear_model import LinearRegression
+from sklearn.datasets import load_boston
+from sklearn.preprocessing import MinMaxScaler
+   
+자주색 머신러닝 소스 깃주소 
+ https://github.com/rickiepark/intro_ml_with_python_2nd_revised/tree/main/
+
+자주색 53페이지 ~ 54페이지 
+머신러닝
+  지도 - 분류, 회귀
+
+ predict(예측값)  예측 predict단어는 예측
+ Accuracy(정확도)  accuracy단어는  정확성 = (TN+TP)/(TN+FN+FN+TP)
+ Precision(정밀도) precision단어는 정밀도 = TP/(FT+TP)
+ Recall(재현율)
+ Rate 
+
+ svc =  support vector  classification
+ svr =  support vector  regression
+
+ 아님  pip install  sklearn 
+ 정답  pip install  scikit-learn  
+ 확인  pip list
+ # pip uninstall  scikit-learn  
+ # pip install scikit-learn==1.0.2
+
+
+ https://opencv.org/
+ #OpenCV(Open Source Computer Vision Libary)
+ #이미지처리 
+ pip install opencv-python
+ 
+
+평가지표 - mse,rmse,mae,R2
+자주색 76페이지  평균제곱오차  MSE(mean square error)
+
+
+학습이론
+ㄴ지도학습-감독O 훈련데이터(80%) + 테스트데이터(20%)
+ㄴ비지도학습-감독x 훈련데이터(80%) + 테스트데이터(20%)
+ㄴ강화학습-Q러닝, DQN, A3C
+ㄴ생성학습-GAN, VAE
+
+참고 머신러닝 종류
+선형회귀,로지스틱회귀,랜덤포레스트,신경망
+K-means Clustering, DBSCAN
+Principal component analysis (PCA)
+
+
+한빛 머신러닝교재
+ㄴ지도학습  17페이지
+   k-최근접이웃, 선형모델, 나이브베이즈분류기, 결정트리, 결정트리앙상블, 
+   커널서포트벡터머신, 신경망(딥러닝)        
+
+  knn=k-nearest-neighbors
+   예측하려는 데이터 x가 주어지면, 기본 데이터중 속성이 비슷한 k개의 이웃을 먼저 찾는다 
+   즉 데이터x 둘러싼 k개의 가장 가까운 이웃을 찾고, 이웃 데이터가 가장 많이 속해 있는 목표클래스를 예측값을 결정
+
+
+ㄴ비지도학습  18페이지
+  k-평균군집, 병합군집, DBSCAN
+
+
+자주색머신러닝 32페이지
+ 과학수학계산용 팩키지 - 선형대수,함수최적화,신호처리, 미분/적분, 통계분포 
+
+
+ predict(예측값)  예측 predict단어는 예측
+ Accuracy(정확도)  accuracy단어는  정확성 = (TN+TP)/(TN+FN+FN+TP)
+ Precision(정밀도) precision단어는 정밀도 = TP/(FT+TP)
+ Recall(재현율)
+ Rate 
+
+  //TNR = true negative Rate 
+  //FPR = false positive Rate
+ // positive판정비율, negative판정비율
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+ 12월 06일 수요일 ~ 12월 15일 금요일  머신러닝
+ 12월 18일 월요일 ~  12월 28일 목요일  딥러닝
+
+선형회귀,로지스틱회귀,랜덤포레스트,신경망
+K-means Clustering, DBSCAN
+Principal component analysis (PCA)
+
+
+
 Mtest
 ㄴwork1204
    data폴더 
@@ -16,24 +116,75 @@ Mtest
 딥러닝교재 41페이지 차트 matplotlib
 딥러닝교재 47페이지 퍼셉트론 이론 (and,or,xor,~~~)
  ㄴ딥러닝교재 47페이지 선형회귀  가중치, 편향 
-딥러닝교재 63페이지 퍼셉트론에서 신경망뉴런으로 전환 
+딥러닝교재 63페이지 퍼셉트론에서 신경망뉴런NN으로 전환 
 딥러닝교재 82페이지 신경망에서 행렬곱을 넘피
+딥러닝교재 83페이지 = 입력층, 은닉층, 출력층
+딥러닝교재 89페이지 딥러닝의 절반이상 numpy라이브러리 
+이미지처리 numpy라이브러리 
+
+ https://opencv.org/
+ #OpenCV(Open Source Computer Vision Libary)
+ #이미지처리 
+ pip install opencv-python
+ 
+ pip uninstall  scikit-learn  
+ pip install scikit-learn==1.0.2
+
+
+
 
 
   12월04일 월요일 데이터베이스(mysql)  연결정보, 조회결과 rows=cursor.fetchall()
 
   12월04일 월요일오후 restAPI구현 
     공공데이터  wwww.data.go.kr 가입후 아래 문서 요청 
-    ㄴ한국문화관광연구원_관광자원통계서비스
-    ㄴ한국문화관광연구원_출입국관광통계서비스
+    ㄴ실습 한국문화관광연구원_관광자원통계서비스- 방문한 내국인/외국인  어느지역,명소 방문했는지 
+    ㄴ완성 한국문화관광연구원_출입국관광통계서비스
 
   교재보기
-   12월08일 금요일 시험보기 
-  12월06일 수요일 이미지cv2(넘피, opencv2)
+  12월08일 금요일 시험보기 
   학습이론 - 머신러닝,딥러닝(학습데이터,test데이터)
+  12월06일 수요일 이미지cv2(넘피, opencv2)
+ 
 
 2023-12-04-월요일 관광자원통계
 http://openapi.tour.go.kr/openapi/service/EdrcntTourismStatsService/getEdrcntTourismStatsList
+restAPI는 작성한된문서포맷패턴,변수이름 정확히 사용
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+[['202101', '미  국', '275', 12013], 
+ ['202102', '미  국', '275', 11212],
+  ['202103', '미  국', '275', 12321],
+ ['202104', '미  국', '275', 12944],
+ ['202105', '미  국', '275', 17278],
+ ['202106', '미  국', '275', 18159],
+ ['202107', '미  국', '275', 21775], 
+['202108', '미  국', '275', 20561],
+ ['202109', '미  국', '275', 19227],
+ ['202110', '미  국', '275', 21607], 
+['202111', '미  국', '275', 20123], 
+['202112', '미  국', '275', 16805],
+ ['202201', '미  국', '275', 15570], 
+['202202', '미  국', '275', 15845], 
+['202203', '미  국', '275', 16968], 
+['202204', '미  국', '275', 30882], 
+['202205', '미  국', '275', 42490], 
+['202206', '미  국', '275', 55444], 
+['202207', '미  국', '275', 53942], 
+['202208', '미  국', '275', 50299], 
+['202209', '미  국', '275', 60435],
+ ['202210', '미  국', '275', 73560],
+ ['202211', '미  국', '275', 64861],
+ ['202212', '미  국', '275', 63352]]
+
+데이터수집
+ㄴ개인,회사(이익차원),교육(웹크롤링수집,국가데이터수집=restAPI)
+ㄴ정형(cvs,엑셀),반정형(xml),비정형(이미지)
+ㄴ기계학습을 위해서 엄청난 데이터 
+ㄴ기계학습 실습을 위해서 붓꽃,타이타닉,맨하턴집값,당뇨(남/여,키,몸,가족병력)
+
+
+
 
 
 

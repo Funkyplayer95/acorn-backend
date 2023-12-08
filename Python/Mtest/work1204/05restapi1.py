@@ -37,7 +37,6 @@ def get_request(url, enc='utf-8'):
 
 
 def get_NatVisitor(yyyymm, nat_cd, ed_cd):
-    serviceKey = '영임쌤껏 ~~~xGOhxyxny5TwyxfqJ6cik8%2Fxa0rl5~~3D%3D'
     serviceKey='400iA9ln1XUUO3jxGMYEKx0ce9vcpw23Ag5htvt0M1Kjiefy%2F1sRLNBogr0aDAjMT9zZ1B9FEsmSbTv19x4r1w%3D%3D'
     params = '?_type=json&serviceKey='+ serviceKey
     params = params + '&YM=' + str(yyyymm)
