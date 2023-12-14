@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>#tagPage</title>
+  <link rel="stylesheet" th:href="@{/commonstyle.css}">
+</head>
+<style>
+  body {
+    margin: 65px 0;
+  }
+
+  .TOP3 {
+    box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.4);
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: 10vh 20px calc(80% - 10vh - 20px) 20%;
+    width: 80vw;
+    margin: 20px;
+    border-radius: 20px;
+  }
+
+  .platformimg>img {
+    margin: 5px;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+
+  .relatedWords {
+    padding: 5px;
+    margin-top: 10px;
+    transition: 0.5s;
+    overflow-x: scroll;
+    display: flex;
+    width: 100vw;
+    /* justify-content: center; */
+  }
+
+  .relatedWords>a {
+    align-items: center;
+    white-space: nowrap;
+    height: 20px;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    background-color: #bdbdbd;
+  }
+
+  .gotocontent,
+  .likenum {
+    margin: 5px;
+    overflow: hidden;
+    /* white-space: nowrap; */
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  a {
+    text-decoration: none;
+    color: rgb(53, 53, 53);
+    font-weight: bold;
+  }
+
+  .makeTag {
+    margin: 20px;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btnSet {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .copyBtn {
+    visibility: hidden;
+    z-index: -1;
+    position: relative;
+    left: 80px;
+    transition: 0.5s;
+  }
+</style>
+
+<body>
+  <iframe class="header" id="header" src="header" frameborder="0"></iframe>
+  <iframe id="side" class="side" src="sidebar" frameborder="0"></iframe>
+  <div class="detail" style="width: 95vw; font-size: xx-small; color: lightgrey; text-align: end;">상세보기</div>
+  <div id="relatedWords" class="relatedWords">
+    <a href="">#단어1</a>
+    <a href="">#콜록콜록2</a>
+    <a href="">#단어3</a>
+    <a href="">#단단어4</a>
+    <a href="">#단어5</a>
+    <a href="">#단어6</a>
+    <a href="">#단어7</a>
+    <a href="">#단어8</a>
+    <a href="">#단어9</a>
+    <a href="">#단어10</a>
+    <a href="">#단어11</a>
+    <a href="">#단어12</a>
+    <a href="">#단어13</a>
+    <a href="">#단어14</a>
+    <a href="">#단어15</a>
+    <a href="">#단어16</a>
+    <a href="">#단어17</a>
+    <a href="">#단어18</a>
+    <a href="">#단어19</a>
+    <a href="">#단어20</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+    <a href="">#단어21</a>
+  </div>
+  <div class="makeTag">
+    <textarea name="" id="makeTagBox" cols="10" rows="5" placeholder="태그를 선택하거나 입력 해주세요."
+      style="height: 0; visibility: hidden; margin: 0px; padding: 0px; border-radius: 10px; border: 3px solid #2c97ed; transition: 0.3s;"></textarea>
+    <div class="btnSet" style="align-items: end;">
+      <button id="copyBtn" class="copyBtn" onclick="copy()"
+        style="margin: 0; width: 80px; padding: 5px 0; border-radius: 5px; border: none; background-color: #7a7a7a; color: aliceblue;">복사</button>
+      <button id="makeTagBtn" class="makeTagBtn" onclick="makeTag()"
+        style="margin: 0; width: 80px; padding: 5px 0; border-radius: 5px; border: none; background-color: #7a7a7a; color: aliceblue;">태그만들기</button>
+    </div>
+  </div>
+  <div class="INSTA TOP3">
+    <div class="platformimg">
+      <img
+        src="https://mblogthumb-phinf.pstatic.net/MjAxODA4MjBfMTYz/MDAxNTM0NzMxOTA1NzI5.iiZw2j9KPxorBAw1rDxzLH7DjLH4qL0rXPWjDfZDSUIg.VAddbzhp-eDEEqeLYjCNMbZDfIcgjs3GUMUZ8q9aiVgg.PNG.gaogirl/instagram_PNG9.png?type=w800"
+        alt="">
+    </div>
+    <hr>
+    <div class="gotocontent">
+      <p>1위 <a href="#">컨텐츠내용내용내용내용...</a></p>
+      <p>2위 <a href="#">컨텐츠내용내용내용내용...</a></p>
+      <p>3위 <a href="#">컨텐츠내용내용내용내용...</a></p>
+    </div>
+    <div class="likenum">
+      <p>❤️ 12345</p>
+      <p>❤️ 1234</p>
+      <p>❤️ 123</p>
+    </div>
+  </div>
+  <div class="YOUTUBE TOP3">
+    <div class="platformimg">
+      <img
+        src="data:image/png;base64,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"
+        alt="">
+    </div>
+    <hr>
+    <div class="gotocontent">
+      <p>1위 <a href="#">컨텐츠내용내용내용내용...</a></p>
+      <p>2위 <a href="#">컨텐츠내용내용내용내용...</a></p>
+      <p>3위 <a href="#">컨텐츠내용내용내용내용...</a></p>
+    </div>
+    <div class="likenum">
+      <p>❤️ 12345</p>
+      <p>❤️ 1234</p>
+      <p>❤️ 123</p>
+    </div>
+  </div>
+  <div class="TIKTOK TOP3">
+    <div class="platformimg">
+      <img src="https://images.wondershare.kr/uniconverter/article/vcj31-1.png" alt="">
+    </div>
+    <hr>
+    <div class="gotocontent">
+      <p>1위 <a href="#">컨텐츠내용내용내용내용...</a></p>
+      <p>2위 <a href="#">컨텐츠내용내용내용내용...</a></p>
+      <p>3위 <a href="#">컨텐츠내용내용내용내용...</a></p>
+    </div>
+    <div class="likenum">
+      <p>❤️ 12345</p>
+      <p>❤️ 1234</p>
+      <p>❤️ 123</p>
+    </div>
+  </div>
+  <script>
+    function sidebar() {
+      var target = document.getElementById("side")
+      if (window.getComputedStyle(target).visibility != "visible") {
+        target.classList.add("side-active")
+        target.style.visibility = "visible";
+        target.style.opacity = 1;
+        target.style.height = "minmax(100%," + document.body.clientHeight + "px)";
+      }
+      else {
+        target.classList.remove("side-active")
+        target.style.visibility = "hidden";
+        target.style.opacity = 0;
+      }
+    }
+    function makeTag() {
+      var target = document.getElementById("makeTagBox")
+      if (window.getComputedStyle(target).visibility != "visible") {
+        document.getElementById("relatedWords").style.width = "max-contents";
+        document.getElementById("relatedWords").style.height = "100%";
+        document.getElementById("relatedWords").style.width = "80vw";
+        document.getElementById("copyBtn").style.visibility = "visible";
+        document.getElementById("copyBtn").style.left = "-5px";
+        target.style.visibility = "visible";
+        target.style.opacity = 1;
+        target.style.height = "150px";
+        target.style.padding = "20px";
+        target.style.margin = "10px 0";
+        document.getElementById("relatedWords").style.lineHeight = "2.5";
+        document.getElementById("relatedWords").style.display = "inline-block";
+      }
+      else {
+        document.getElementById("relatedWords").style.width = "100vw";
+        document.getElementById("relatedWords").style.lineHeight = "";
+        document.getElementById("copyBtn").style.visibility = "hidden";
+        document.getElementById("copyBtn").style.left = "";
+        target.style.visibility = "hidden";
+        target.style.opacity = 0;
+        target.style.height = "0px";
+        target.style.padding = "0px";
+        target.style.margin = "0px";
+        document.getElementById("relatedWords").style.height = "";
+        document.getElementById("relatedWords").style.display = "flex";
+      }
+    }
+    function wait(sec) {
+      let start = Date.now(), now = start;
+      while (now - start < sec * 1000) {
+        now = Date.now();
+      }
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sidebar</title>
+    <link rel="stylesheet" href="../static/commonstyle.css">
+</head>
+<style>
+body {
+    margin: 0px;
+    padding: 0px;
+    background-color: #1479cc;
+}
+.sidebar {
+    right: 0;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+}
+li {
+    list-style: none;
+}
+.logg{
+    display: flex;
+    >*{margin: 10px;}
+}
+a{
+vertical-align:baseline;
+text-align: left;
+text-decoration: none;
+color: aliceblue;
+}
+.x{
+    top: 12px;
+    right: 5px;
+    position: fixed;
+    display: flex;
+    justify-content: end;
+}
+.menu{
+    margin-top: 40px;
+    padding-left: 30px;
+}
+</style>
+<body>
+    <div class="hambuger">
+        <div class="sidebar">
+            <div id="xBnt" class="x" onclick="closeSide()">
+                <img src="https://cdn-icons-png.flaticon.com/512/75/75519.png" alt="" width="30px" height="30px">
+            </div>
+            <div class="menu">
+                <div class="logg">
+                    <a href="login" th:text="${session.email}">로그인</a><hr><a href="signup" th:text="${logout}">회원가입</a>
+                </div>
+                <ul>
+                    <li><a onclick="mypagemove()">마이 페이지</a></li>
+                    <li><a href="login">주간 순위</a></li>
+                    <li><a href="login">문의사항</a></li>
+                    <li><a href="login">개발자</a></li>
+                   <!-- <li>메뉴</li>
+                    <li>구성</li>-->
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script>
+        function closeSide(){window.parent.sidebar();}
+        function mypagemove() {window.parent.location.href="mypage";}
+
+    </script>
+</body>
+</html>

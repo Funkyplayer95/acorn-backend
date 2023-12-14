@@ -1,0 +1,27 @@
+server:
+  port: 8067
+
+spring:
+  datasource:
+#    url: jdbc:mysql://acorndb.ck3es1oyjkdg.ap-northeast-2.rds.amazonaws.com:3306/acornDB
+    url: jdbc:mysql://localhost:3306/ftest
+    username: root
+    password: 1234
+  jpa:
+    hibernate:
+    ddl-auto: update
+  output:
+    ansi:
+      enabled: ALWAYS
+
+
+sns:
+  google:
+    url: https://accounts.google.com/o/oauth2/v2/auth
+  client:
+    id: 461003405923-udui7pdgf4ugjsja9k6ms97jfvvt5aii.apps.googleusercontent.com
+    secret: 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
+  callback:
+    url: http://localhost:8067/auth/google/callback
+  token:
+  url: https://oauth2.googleapis.com/token

@@ -20,6 +20,10 @@ train = pd.read_csv('./titanic/train.csv')
 test = pd.read_csv('./titanic/test.csv')
 
 #순서1] 결측값확인  train.isnull().sum() / test.isnull().sum()
+print( '111111 train 누락값 갯수 확인 ', train.isnull().sum())
+print()
+print( '111111 test 누락값 갯수 확인 ', test.isnull().sum())
+
 #순서2]  Name필드 호칭정리후 새로운 필드 Title추가 맨끝에 나중에 Name필드 삭제  
 train_test_data = [train, test]
 for dt in train_test_data:
@@ -29,7 +33,8 @@ print(train.head())
 print()
 print(test.head())
 print()
-time.sleep(2)
+print('-' * 100)
+
 
 # 숫자로 분류시키기 (Title map) => Title 컬럼
 # Mr : 0
@@ -87,7 +92,7 @@ for dt in train_test_data:
     dt.loc[ (dt['Age'] >= 37) & (dt['Age'] <= 66) , 'Age'] = 3
     dt.loc[ (dt['Age'] >= 67) , 'Age'] = 4
 
-print('점심시간전~~~ ')
+
 print(train.head(5))
 print()
 print(test.head(5))
@@ -98,6 +103,24 @@ print()
 # plt.show()
 
 
+#순서5] Embarked: 승선
+# Embarked: 탑승 항구, C = Cherbourg, Q = Queenstown, S = Southampton
+for dt in train_test_data:
+    dt['Embarked'] = dt['Embarked'].fillna('S')
+
+embarked_mapping ={ 'S':0, 'Q':1, 'C':2}
+for dt in train_test_data:
+    dt['Embarked'] = dt['Embarked'].map(embarked_mapping)
+
+print('점심시간전~~~ ')
+print(train.head(5))
+print()
+print(test.head(5))
+print()
+
+
+#순서6] Fare요금금액
+#순서7] Cabin선실번호
 
 '''
 변경및 변동된 데이터 확인 head()함수 복붙
@@ -209,21 +232,6 @@ Embarked
 '''
 
 
-#sns이용한 그래프
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-# def bar_chart(feature):
-#     survived = train[train['Survived']==1][feature].value_counts()
-#     dead = train[train['Survived']==0][feature].value_counts()
-#     df = pd.DataFrame([survived,dead])
-#     df.index = ['Survived','Dead']
-#     df.plot(kind='bar',stacked=True, figsize=(10,5))
-    
-
-# print('train[Pclass].unique() ', train['Pclass'].unique())
-# bar_chart('Pclass')
-# plt.title('Pclass ok')
-# plt.show()
 
 '''
 PassengerId: 탑승자 데이터 일련번호

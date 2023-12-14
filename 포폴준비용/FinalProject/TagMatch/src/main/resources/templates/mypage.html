@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마이페이지</title>
+    <link rel="stylesheet" th:href="@{/commonstyle.css}">
+</head>
+<style>
+    body{
+      margin: 80px 0;
+      padding: 0;
+    }
+    h4{
+      position: relative;
+      color:rgb(101, 101, 101);
+      right: 33%;
+      margin: 0;
+      padding-top: 20px;
+    }
+    .box{
+      /* box-shadow: 5px 5px 10px 3px rgba(0, 0, 0, 0.4); */
+      background-color: #FFFFFF;
+      grid-template-columns: 10vh 20px calc(80% - 10vh - 20px) 20%;
+      width: 80vw;
+      margin: 5px 20px 20px 20px;
+      border-radius: 20px;
+      border: 3px solid #2c97ed;
+      display: flex;
+      justify-content: space-between;
+  }
+    .box div{
+      width: 98%;
+  }
+    a{
+      text-decoration: none;
+      color: inherit;
+  }
+    ul{
+      list-style: none;
+      padding: 0px 15px;
+  }
+    li{
+      display: flex;
+      justify-content: space-between;
+      padding: 5px;
+  }
+</style>
+<body>
+<iframe class="header" id="header" src="header" frameborder="0"></iframe>
+<iframe id="side" class="side" src="sidebar" frameborder="0"></iframe>
+<h4>최근검색어</h4>
+<div class="recentSearchHistory box">
+    <div class="recentSearchHistory_word">
+        <ul>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+            <li><a href="#"># 최근검색단어...</a><span>2000-09-09</span></li>
+        </ul>
+    </div>
+</div>
+<h4>즐겨찾기</h4>
+<div class="favorites box">
+    <div class="favorites_word">
+        <ul>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+        </ul>
+    </div>
+</div>
+<h4>맞춤추천</h4>
+<div class="recommendation box">
+    <div class="rcmnd_word">
+        <ul>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+            <li><a href="#"># 단어...</a></li>
+        </ul>
+    </div>
+</div>
+<script>
+    function sidebar() {
+        var target = document.getElementById("side")
+        if (window.getComputedStyle(target).visibility != "visible") {
+            target.classList.add("side-active")
+            target.style.visibility = "visible";
+            target.style.opacity = 1;
+            target.style.height = "minmax(100%,"+document.body.clientHeight+"px)";
+        }
+        else {
+            target.classList.remove("side-active")
+            target.style.visibility = "hidden";
+            target.style.opacity = 0;
+        }
+    }
+</script>
+</body>
+</html>
