@@ -1,0 +1,26 @@
+server:
+    port: 8067
+
+spring:
+#    datasource:
+#        url: jdbc:mysql://acorndb.ck3es1oyjkdg.ap-northeast-2.rds.amazonaws.com:3306/acornDB
+#        username: master
+#        password: qwerqwer
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/TagMatch
+        username: root
+        password: 1234
+#        url: jdbc:mysql://tagmatch.ck5js0hehig5.ap-northeast-2.rds.amazonaws.com:3306/TagMatch
+#        username: root
+#        password: dmsdk0545@
+
+    jpa:
+        show-sql: true
+        hibernate:
+            ddl-auto: update
+    output:
+        ansi:
+            enabled: ALWAYS
+    profiles:
+        include: oauth

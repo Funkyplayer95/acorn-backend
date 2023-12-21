@@ -6,36 +6,15 @@ rc('font', family=font_name)
 
 import numpy as np
 import cv2 
-import sys
-import time
 
 import warnings
 warnings.filterwarnings('ignore') #문법의 에러나 실행중 에러가 아니라 경고무시 
 
 
-# path ='./data/scuba.mp4'
-# cap = cv2.VideoCapture(path)
-
-# path ='./data/36.jpg'
-# img = cv2.imread(path)
-# title = 'iu'
-# x,y = 100, 100
-
-# path ='./data/blank_500.jpg'
-# img = cv2.imread(path)
-
-
-# path ='./images/car/05.jpg'
-# img = cv2.imread(path)
-# plt.title('mycar')
-# plt.imshow(img, cmap='gray')
-# plt.show()
-
-
-# 전처리에서 50번라인 모폴로지함수 적용하면 이미지침식,팽창,열기,닫기 ==>노이즈제거, 돌출완화
+# 전처리에서 모폴로지함수 적용하면 이미지침식,팽창,열기,닫기 ==>노이즈제거, 돌출완화
 # cv2.MORPH_CLOSE, cv2.MORPH_OPEN, cv2.MORPH_DILAE, cv2.MORPH_ERODE
 def preprocessing(car_no):
-    image = cv2.imread('./images/car/%02d.jpg' %car_no, cv2.IMREAD_COLOR)
+    image = cv2.imread('images/car/%02d.jpg' %car_no, cv2.IMREAD_COLOR)
     if image is None:
         return None, None
     
@@ -52,9 +31,9 @@ def preprocessing(car_no):
 
 #순서1] 이미지에 엣지를 구해서 필터적용 
 # car_no = int(input("자동차 영상 번호 (0~15)>>>  ")) 
-car_no = 5
+car_no = 20 # 5 1  13
 image, morph = preprocessing(car_no) #데이터회색,블러
-print('++++++ image = preprocessing(car_no) ++++++ ')
+print('12-15-금요일 image = preprocessing(car_no')
 print(image)
 # print('morph = preprocessing(car_no) ', morph)
 
@@ -82,13 +61,11 @@ def find_car(image):
     cd = [ (tuple(map(int,center)), tuple(map(int,size)) ,angle )  for center,size,angle in rects  if verify_size(size)]      
     return cd
 
-# 2023-12-14-목요일 12시 
-cd2 = find_car(morph) #이미지컨투어 사각형 지정 
 
 
 #순서3] 이미지 번호위치 문자지정
 def position_car(image, rect):
-    print('position_car함수호출 111111111111')
+    print('position_car함수호출')
     center, (w, h), angle = rect       # 중심점, 크기, 회전 각도
     if w < h :                         # 세로가 긴 영역이면
         w, h = h, w                    # 가로와 세로 맞바꿈
@@ -99,14 +76,14 @@ def position_car(image, rect):
     rot_img= cv2.warpAffine(image, rot_mat, size, cv2.INTER_CUBIC)  
     crop_img = cv2.getRectSubPix(rot_img, (w, h), center)  
     crop_img = cv2.cvtColor(crop_img, cv2.COLOR_BGR2GRAY)  # 명암도 영상
-    return cv2.resize(crop_img, (144, 28))              
+    return cv2.resize(crop_img, (144, 28))    
+          
 
-
+cd2 = find_car(morph) #이미지컨투어 사각형 지정 
 imgs = [position_car(image, k) for k in cd2]
 for k, img in enumerate(imgs):
   #  RGB=레드그린블루  cv2에서 BGR
   cv2.polylines(image, [np.int32(cv2.boxPoints(cd2[k]))], True, (0, 255,255), 2)
-  #cv2.imshow("cd2 ", img)
 
 cv2.imshow("image", image)
 cv2.waitKey(0)
@@ -123,11 +100,6 @@ cv2.waitKey(0)
 # plt.show()
 # cv2.waitKey()
 # cv2.destroyWindow()
-
-
-
-
-
 
 print()
 print('09car.py문서 이미지 처리 종료 ')

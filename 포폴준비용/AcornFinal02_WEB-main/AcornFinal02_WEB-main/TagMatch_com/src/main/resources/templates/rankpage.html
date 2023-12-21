@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="ko">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>👑Rankinga👑</title>
+    <link rel="stylesheet" th:href="@{/commonstyle.css}">
+</head>
+<style>
+
+</style>
+
+<body>
+    <iframe class="header" id="header" src="header" frameborder="0"></iframe>
+    <iframe id="side" class="side" src="sidebar" name="sideb" frameborder="0"></iframe>
+
+    <input type="radio">WEEK
+    <input type="radio">MONTH
+    <br>
+    <input type="checkbox">인스타
+    <input type="checkbox">틱톡
+    <input type="checkbox">유튜브
+
+    <table>
+        <!-- 출력내용 -->
+    </table>
+    </div>
+    <script>
+        function sidebar() {
+            var target = document.getElementById("side")
+            if (window.getComputedStyle(target).visibility != "visible") {
+                target.classList.add("side-active")
+                target.style.visibility = "visible";
+                target.style.opacity = 1;
+                target.style.height = "minmax(100%," + document.body.clientHeight + "px)";
+            }
+            else {
+                target.classList.remove("side-active")
+                target.style.visibility = "hidden";
+                target.style.opacity = 0;
+            }
+        }
+    </script>
+</body>
+
+</html>
